@@ -1,0 +1,40 @@
+.main-container{
+    border: 1px solid;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.all-container{
+    /* height: 80vh; */
+    max-width: 400px;
+    background-color: white;
+}
+
+input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    outline: 1px solid rgb(214, 214, 214);
+    font-size: 14px;
+}
+
+.btn-auth{
+    background-color: #FE3E6C;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    margin-top: 0px;
+}
+
+.privacy-policy{
+    font-size: 12px;
+    margin-top: 20px;
+    color: #ACACB5;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #FE3E6C;
+}

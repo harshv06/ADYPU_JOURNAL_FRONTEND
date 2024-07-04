@@ -1,0 +1,60 @@
+.bg-image{
+    padding: 20px;
+}
+
+.bg-image button{
+    background-color: transparent;
+    border: 1px solid black;
+    /* color: white; */
+    margin: 5px;
+    padding:2px 10px 3px 10px;
+}
+
+.nav-container{
+    padding: 0;    
+}
+
+
+
+.logo{
+    /* width: clamp(60px,10vw,200px); */
+    width: 7rem;
+    margin: 0;
+    padding: 0;
+}
+
+.heading {
+    /* font-size: 2vw; */
+    font-size: clamp(20px, 2vw, 100px);
+    color: black;
+    font-weight: bold;
+}
+
+.searchbar{
+   padding: 6px;
+   margin-top: 2px;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid black;
+}
+
+
+.nav-line{
+    background-color: rgb(179, 25, 25);
+}
+
+.nav-link{
+    color: white;
+    text-decoration: none;
+    margin-right: 5vw;
+    font-weight: 500;
+}
+
+marquee{
+    margin-bottom: 40px;
+
+}
+
+.navbar-toggler {
+    background-color: rgb(255, 255, 255);
+}   
