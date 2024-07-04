@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from './navbar'
 import './Home.css'
 import Footer from './Footer'
+import Img from '../../src/Images/adyp_cover.png'
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
         <div className=''>
           <p>Home / Archives / Vol. 11 No. 2 (2024): March-April</p>
           <h3>Vol 11 No. 2</h3>
-          <img src="src\Images\adyp_cover.png" className='cover-image' alt="" />
+          <img src={Img} className='cover-image' alt="" />
           {/* <img src="https://drive.google.com/file/d/116ccnz8eCP_VDLKOEHSB-rKg_erynxOy/view?usp=drive_link" className='cover-image' alt="" /> */}
           <p>Published : 09/03/2024</p>
           <hr />
