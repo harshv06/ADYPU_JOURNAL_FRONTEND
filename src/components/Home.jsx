@@ -32,11 +32,11 @@ function Home() {
           <h4>Quick Links</h4>
           <hr />
           <ul>
-            <li>Editorial team</li>
-            <li>Peer Review</li>
-            <li>Publiscation Ethics</li>
-            <li>Guidlines And Authors</li>
-            <li>Aim & Scope/Focus</li>
+            <li>Editorial Board</li>
+            <li>Publication Ethics</li>
+            <li>Upload</li>
+            <li>Track</li>
+            <li>Preview</li>
             <li>Contact us</li>
             <li>Abstracting & Indexing</li>
           </ul>
