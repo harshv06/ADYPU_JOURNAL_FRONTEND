@@ -1,6 +1,7 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import Img from "../../src/Images/logo.png";
 
 function Navbar() {
   return (
@@ -14,14 +15,13 @@ function Navbar() {
                             <button class="btn btn-outline-danger" type="submit">Search</button>
                             </div>
                         </form> */}
-            <img src="src\Images\logo.png" alt="" className="logo" />
+            <img src={Img} alt="" className="logo" />
           </div>
           <div className="col-8 col-sm-10 align-self-center justify-content-start">
             <h2 className="heading ">
-              Ajeenkya DY Patil Journal of Innovation in Engineering &
-              Technology
+              ADYP Journal in Engineering Technologies
             </h2>
-            <p>Ajeenkya DY Patil Official Research Journal</p>
+            <p>Ajinkya DY Patil Official Research Journal</p>
           </div>
         </div>
         {/* <button><Link to='/login'>Login</Link> </button> */}
@@ -49,6 +49,16 @@ function Navbar() {
                     Home
                   </Link>
                 </li>
+                <li class="nav-item ">
+                  <Link to="/aboutinstitute" className="nav-link">
+                    About Us
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/editorial" className="nav-link">
+                    Editorial Board
+                  </Link>
+                </li>
                 {/* <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Archives
@@ -60,34 +70,11 @@ function Navbar() {
                                         <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </li> */}
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
-                    Archives
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#">
-                    Current
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <Link to="/editorial" className="nav-link">
-                    Editorial Board
-                  </Link>
-                </li>
-                {/* <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Editorial Committe
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><hr class="dropdown-divider" /></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
+                {/* <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Guidlines For Author</a>
                                 </li> */}
 
-                {/* <li class="nav-item dropdown">
+                <li class="nav-item dropdown">
                   <a
                     class="nav-link dropdown-toggle"
                     href="#"
@@ -95,51 +82,49 @@ function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Peer Review & Ethics
+                    Guidlines For Author
                   </a>
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="#">
-                        Action
+                        Publication Etics
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">
-                        Another action
-                      </a>
-                    </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
+                        Preview
                       </a>
                     </li>
                   </ul>
-                </li> */}
-
-                <li class="nav-item ">
-                  <Link to="/aboutinstitute" className="nav-link">
-                    About
-                  </Link>
-
-                  {/* <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">About Journal</a></li>
-                                        <li>
-                                        </li>
-                                    </ul> */}
-                </li>
-                <li class="nav-item">
-                  {/* <a class="nav-link active" aria-current="page" href="">Home</a> */}
-                  <Link to="/upload" className="nav-link">
-                    Upload
-                  </Link>
                 </li>
 
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Submission
+                  </a>
+                  <ul class="dropdown-menu">
+                    <Link to="/upload" className="dropdown-item">
+                      Upload
+                    </Link>
+                    <Link to="/" className="dropdown-item">
+                      Tracking
+                    </Link>
+                  </ul>
+                </li>
+
+                {/* <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Submission</a>
+                                </li> */}
+
                 <li class="nav-item">
                   {/* <a class="nav-link active" aria-current="page" href="">Home</a> */}
-                  <Link to="/upload" className="nav-link">
+                  <Link to="/contact" className="nav-link">
                     Contact Us
                   </Link>
                 </li>
