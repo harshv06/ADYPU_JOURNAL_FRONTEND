@@ -10,8 +10,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Aboutinstitute from "./components/pages/Aboutinstitute";
 import Admin from "./components/pages/Admin";
 
-import Home from "./components/Home";
-import Contact from "./components/contact/Contact";
+// import Home from "./components/Home";
+// import Contact from "./components/contact/Contact";
 import Editorial from "./components/Editorial";
 import Home from './components/Home'
 import Contact from './components/contact/Contact'
@@ -31,17 +31,6 @@ function App() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-       <BrowserRouter>
-         <Routes>
-           <Route path="/" element={<Home/>}/>
-            {/* <Route path='/login' element={<Login/>}/> */}
-           {/* <Route path='/register' element={<Register/>}/> */}
-           <Route path='/upload' element={<Upload/>}/>
-           {/* <Route path='/admin' element={<Admin/>}/>  */}
-           <Route path='/aboutinstitute' element={<Aboutinstitute/>}/>
-           <Route path='/admin' element={<Admin/>}/>
-           <Route path='/contact' element={<Contact/>}/>
-         </Routes>
       </BrowserRouter>
     </>
   );

@@ -58,3 +58,16 @@ marquee{
 .navbar-toggler {
     background-color: rgb(255, 255, 255);
 }   
+
+.dropdown-menu{
+    background-color: rgb(179, 25, 25);
+    border-radius: 0;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+.dropdown-item{
+    color: white;
+    border-bottom: 1px solid rgb(195, 43, 43);
+}
