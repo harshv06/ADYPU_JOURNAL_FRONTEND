@@ -101,6 +101,16 @@ function Navbar() {
                         Preview
                       </a>
                     </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        Copyright Forms
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        Paper Template
+                      </a>
+                    </li>
                   </ul>
                 </li>
 

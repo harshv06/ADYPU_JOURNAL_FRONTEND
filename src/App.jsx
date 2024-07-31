@@ -10,8 +10,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Aboutinstitute from "./components/pages/Aboutinstitute";
 import Admin from "./components/pages/Admin";
 
-import Home from "./components/Home";
-import Contact from "./components/contact/Contact";
+// import Home from "./components/Home";
+// import Contact from "./components/contact/Contact";
 import Editorial from "./components/Editorial";
 
 function App() {
