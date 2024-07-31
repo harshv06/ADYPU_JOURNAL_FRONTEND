@@ -11,6 +11,7 @@ import Aboutinstitute from './components/pages/Aboutinstitute'
 import Admin from './components/pages/Admin'
 
 import Home from './components/Home'
+import Editorial from './components/Editorial'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
            <Route path='/upload' element={<Upload/>}/>
            {/* <Route path='/admin' element={<Admin/>}/>  */}
            <Route path='/aboutinstitute' element={<Aboutinstitute/>}/>
+           <Route path='/editorial' element={<Editorial/>}/>
            <Route path='/admin' element={<Admin/>}/>
          </Routes>
       </BrowserRouter>
