@@ -3,13 +3,13 @@ import Navbar from '../navbar'
 import Footer from '../Footer'
 
 function Aboutinstitute() {
-    return (
-        <>
-            <Navbar />
+  return (
+    <>
+      <Navbar />
 
-            <div className='container'>
-                <h5>About The Institute</h5>
-                <h1>Ajeenkya DY Patil School Of Engineering, Pune</h1>
+      <div className="container">
+        <h5>About The Institute</h5>
+        <h1>Ajeenkya DY Patil School Of Engineering, Pune</h1>
 
                 <p>
                     Ajeenkya DY Patil University (ADYPU) is India’s premier destination for higher education. Established under the Maharashtra Government Act of 2015, the university aims to shape an innovation-oriented Indian society. It is nestled in Pune, often called the ‘Oxford of the East’ for its educational eminence, within a vast 100-acre campus.
@@ -34,4 +34,4 @@ function Aboutinstitute() {
     )
 }
 
-export default Aboutinstitute
+export default Aboutinstitute;
