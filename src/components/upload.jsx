@@ -8,27 +8,11 @@ import './upload.css'
 function upload() {
 
   const [file1, setFile1] = useState("");
-  const [file2, setFile2] = useState("");
-  const [file3, setFile3] = useState("");
-  const [file4, setFile4] = useState("");
-  const [file5, setFile5] = useState("");
-  const [file6, setFile6] = useState("");
-  const [file7, setFile7] = useState("");
-  const [file8, setFile8] = useState("");
 
   const handleSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append("file", file1);
-        formData.append("file", file2);
-        formData.append("file", file3);
-        formData.append("file", file4);
-        formData.append("file", file5);
-        formData.append("file", file6);
-        formData.append("file", file7);
-        formData.append("file", file8);
-        // console.log(formData);
-        // console.log(file);
         try {
           await axios.post("https://adypu.onrender.com/v1/uploadPDF", formData, {
             headers: {

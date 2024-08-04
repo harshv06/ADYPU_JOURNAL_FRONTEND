@@ -10,19 +10,13 @@ function Navbar() {
       <div className="container justify-content-center p-4" id="nav-tab">
         <div className="row">
           <div className="col-4 col-sm-2">
-            {/* <form action="">
-                            <div className='container'>
-                            <input class=" searchbar" type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn btn-outline-danger" type="submit">Search</button>
-                            </div>
-                        </form> */}
             <img src={Img} alt="" className="logo" />
           </div>
           <div className="col-8 col-sm-10 align-self-center justify-content-start">
             <h2 className="heading ">
-              ADYP Journal in Engineering Technologies
+            Ajeenkya DY Patil Journal of Innovation in Engineering & Technology
             </h2>
-            <p>Ajinkya DY Patil Official Research Journal</p>
+            <p className="subHeading">Ajeenkya DY Patil Official Research Journal</p>
           </div>
         </div>
         {/* <button><Link to='/login'>Login</Link> </button> */}
@@ -93,7 +87,7 @@ function Navbar() {
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="#">
-                        Publication Etics
+                        Publication Ethics
                       </a>
                     </li>
                     <li>
