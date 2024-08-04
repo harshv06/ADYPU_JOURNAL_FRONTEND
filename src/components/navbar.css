@@ -14,7 +14,9 @@
     padding: 0;    
 }
 
-
+.nav-tab{
+    justify-content: center;
+}
 
 .logo{
     /* width: clamp(60px,10vw,200px); */
@@ -28,8 +30,12 @@
     font-size: clamp(20px, 2vw, 100px);
     color: black;
     font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.subHeading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 .searchbar{
    padding: 6px;
    margin-top: 2px;
