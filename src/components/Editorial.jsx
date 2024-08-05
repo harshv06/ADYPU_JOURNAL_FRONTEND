@@ -1,14 +1,17 @@
 import React from "react";
 // import {StyleSheet} from 'react'
 import Navbar from "./navbar";
+import Footer from "./Footer";
 
 const Editorial = () => {
   return (
     <>
       <Navbar />
       <div
+      className="container"
         style={{
           margin: 20,
+          marginLeft:100
         }}
       >
         <h4>Chief Editor :</h4>
@@ -22,7 +25,7 @@ const Editorial = () => {
             Engineering)
           </li>
         </ol>
-
+<hr />
         <h4>Associate Editors :</h4>
         <ol>
           <li>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</li>
@@ -51,15 +54,16 @@ const Editorial = () => {
             Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
           </li>
         </ol>
-
+<hr />
         <h4>Reviewer Board :</h4>
         <ol>
           <li>Dr. Smita Daterao, Assistant Professor, Civil, ADYPSOE Pune</li>
           <li>
-            Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune Dr.
-            Tushar Phadtare, Associate Professor, Computer Engineering, ADYPSOE,
-            Pune
+            Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune 
           </li>
+          <li>Dr.
+            Tushar Phadtare, Associate Professor, Computer Engineering, ADYPSOE,
+            Pune</li>
           <li>
             Dr. Shobha Rupnar, Assistant Professor, Applied Science, ADYPSOE
             Pune
@@ -123,7 +127,7 @@ const Editorial = () => {
             ADYPSOE, Pune
           </li>
         </ol>
-
+<hr />
         <h4>Topics Covered</h4>
         <ul>
           <li>Image Processing1</li>
@@ -135,29 +139,32 @@ const Editorial = () => {
           <li>Internet of Things</li>
           <li>Robotics and Automation</li>
         </ul>
-
+<hr />
         <h4>Author Guidelines</h4>
         <ul>
           <li>
-            XXX journal provides rapid publication of original articles, reviews
-            and short communications.{" "}
+            ADYPJIET journal provides rapid publication of original articles,
+            reviews and short communications.{" "}
           </li>
           <li>
             Submit the manuscript as a email attachment to the editorial office
-            at…….email id……… A manuscript number will be sent to the
-            corresponding author as a acknowledgement.{" "}
+            at email id adypjiet@gmail.com A manuscript number will be sent to
+            the corresponding author as a acknowledgement.{" "}
           </li>
           <li>
             All the manuscripts are peer reviewed by a minimum three members
             from editorial board or reviewer boards.{" "}
           </li>
           <li>
-            All the manuscripts should be preferably in XXXX journal Paper
+            All the manuscripts should be preferably in ADYPJIET journal Paper
             template.
           </li>
         </ul>
       </div>
+      <Footer/>
     </>
+
+
   );
 };
 

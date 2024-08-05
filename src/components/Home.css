@@ -36,3 +36,28 @@
 .container-text{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.d-flex{
+    flex-direction: row;
+}
+
+.about-journal{
+    padding: 10px;
+    text-align: justify;
+}
+
+.indexing_icons img{
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    margin-left: -20px;
+}
+
+.indexing_icons{
+    text-decoration: none;
+    list-style: none;
+}
+
+.quick-nav-link{
+    color: black;
+}

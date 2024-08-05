@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
@@ -14,9 +13,12 @@ function Navbar() {
           </div>
           <div className="col-8 col-sm-10 align-self-center justify-content-start">
             <h2 className="heading ">
-            Ajeenkya DY Patil Journal of Innovation in Engineering & Technology
+              Ajeenkya DY Patil Journal of Innovation in Engineering &
+              Technology
             </h2>
-            <p className="subHeading">Ajeenkya DY Patil Official Research Journal</p>
+            <p className="subHeading">
+              Ajeenkya DY Patil Official Research Journal
+            </p>
           </div>
         </div>
         {/* <button><Link to='/login'>Login</Link> </button> */}
@@ -69,10 +71,9 @@ function Navbar() {
                 {/* <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="#">Guidlines For Author</a>
                                 </li> */}
-                                {/* <li class="nav-item">
+                {/* <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="#">Guidlines For Author</a>
                                 </li> */}
-
 
                 <li class="nav-item dropdown">
                   <a
@@ -85,23 +86,38 @@ function Navbar() {
                     Guidlines For Author
                   </a>
                   <ul class="dropdown-menu">
-                    <li>
+                    {/* <li>
                       <a class="dropdown-item" href="#">
                         Publication Ethics
                       </a>
+                    </li> */}
+                    <li>
+                      <Link to="/author_guide" className="nav-link">
+                        Author Guidelines
+                      </Link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        Preview
-                      </a>
+                      <Link to="/review" className="nav-link">
+                        Review Policy
+                      </Link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a
+                        href="././Copyright-Form.pdf"
+                        className="view-pdf dropdown-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Copyright Forms
                       </a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <a
+                        href="././paper-template.pdf"
+                        className="view-pdf dropdown-item"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         Paper Template
                       </a>
                     </li>
@@ -147,7 +163,7 @@ function Navbar() {
         </nav>
       </div>
       <marquee behavior="" direction="" loop="">
-        Ajeenkya DY Patil School of Engineering, Official Resource Journal Pagex
+        Ajeenkya DY Patil School of Engineering, Official Research Journal Page, Ajeenkya DY Patil Journal in Engineering Tecchnologies (ADYPJIET)
       </marquee>
     </>
   );
