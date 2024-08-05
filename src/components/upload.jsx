@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Nav from './navbar'
 import axios from "axios"
 import './upload.css'
+import Footer from './Footer';
 
 
 function upload() {
@@ -142,6 +143,7 @@ function upload() {
           <input type="submit" value="Upload" className='upload-pdf'/>
         </form>
       </div>
+      <Footer/>
     </>
   )
 }
