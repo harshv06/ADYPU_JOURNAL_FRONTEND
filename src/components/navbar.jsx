@@ -95,7 +95,7 @@ function Navbar() {
                       <Link to="/author_guide" className="nav-link">
                         Author Guidelines
                       </Link>
-                    </li>
+                    </li> //Temp
                     <li>
                       <Link to="/review" className="nav-link">
                         Review Policy
