@@ -2,10 +2,29 @@ import React from "react";
 import Nav from "./navbar";
 import "./Home.css";
 import Footer from "./Footer";
-import Img from "../../src/Images/adyp_cover.png";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const Img ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723531257/adyp_cover_o3dgc4.png"
+
+  const fetchPdf = async () => {
+    try {
+      // Replace with your backend endpoint to fetch the PDF
+      const response = await fetch('http://192.168.0.105:3100/fetchHomePagePdf');
+
+      if (response.ok) {
+        const pdfBlob = await response.blob();
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+        window.open(pdfUrl, '_blank'); // Open PDF in a new tab
+      } else {
+        alert('Failed to fetch PDF');
+      }
+    } catch (error) {
+      console.error('Error fetching PDF:', error);
+      alert('An error occurred while fetching the PDF');
+    }
+  };
+
   return (
     <>
       <Nav />
@@ -14,7 +33,7 @@ function Home() {
           <div className="container-text col-md-3">
             <p>Home / Archives / Vol. 11 No. 2 (2024): March-April</p>
             <h3>Vol 11 No. 2</h3>
-            <img src={Img} className="cover-image" alt="" />
+            <img src={Img} className="cover-image" alt="ADYP Cover" />
             {/* <img src="https://drive.google.com/file/d/116ccnz8eCP_VDLKOEHSB-rKg_erynxOy/view?usp=drive_link" className='cover-image' alt="" /> */}
             <p>Published : 09/03/2024</p>
             <hr />
@@ -23,12 +42,7 @@ function Home() {
             <div className="container-2">
               <h5>The Biological Camera from Kidney of Human Beings</h5>
               <p>Jitendra Sunte (Author)</p>
-              <a
-                href="././Paper.pdf"
-                className="view-pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a onClick={fetchPdf}>
                 View PDF
               </a>
               <hr />

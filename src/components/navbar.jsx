@@ -1,9 +1,9 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
-import Img from "../../src/Images/logo.png";
 
 function Navbar() {
+  const Img="https://res.cloudinary.com/drv3etzyg/image/upload/v1723531249/logo_ubrnvq.webp"
   return (
     <>
       <div className="container justify-content-center p-4" id="nav-tab">
