@@ -1,40 +1,55 @@
-import React from 'react'
-import { useState } from 'react';
-import Nav from './navbar'
-import axios from "axios"
-import './upload.css'
+import React, { useState } from 'react';
+import Nav from './navbar';
 import Footer from './Footer';
+import './upload.css';
 
+function Upload() {
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [uploadStatus, setUploadStatus] = useState('');
 
-function upload() {
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+    console.log(event.target.files[0]);
+  };
 
-  const [file1, setFile1] = useState("");
-
-  const handleSubmit = async (e) => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append("file", file1);
-        try {
-          await axios.post("https://adypu.onrender.com/v1/uploadPDF", formData, {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          });
-          alert("PDF uploaded successfully.");
-        } catch (error) {
-          console.error(error);
-          alert("Error uploading PDF.");
-        }
-      };
+  const handleUpload = async (e) => {
+    e.preventDefault(); // Prevents the page from refreshing on form submission
     
+    if (!selectedFile) {
+      setUploadStatus('Please select a file to upload');
+      alert('Please select a file to upload');
+      return;
+    }
+    
+    
+    const formData = new FormData();
+    formData.append('pdf', selectedFile);
+
+    try {
+      const response = await fetch('http://192.168.0.105:3100/api/uploadPdf', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        setUploadStatus('File uploaded successfully');
+        alert('File uploaded successfully');
+      } else {
+        setUploadStatus('Failed to upload file');
+        alert('Failed to upload file');
+      }
+    } catch (error) {
+      console.error('Error uploading file:', error);
+      setUploadStatus('An error occurred while uploading the file');
+      alert('An error occurred while uploading the file');
+    }
+  };
 
   return (
-
-
     <>
       <Nav />
       <div className='container'>
-        <form action="" onSubmit={handleSubmit} encType="multipart/form-data">
+        <form onSubmit={handleUpload} encType="multipart/form-data">
           <div className='container row'>
             <div className='col-sm-4'>Corresponding Author</div>
             <div className='col-sm-2'>
@@ -61,173 +76,23 @@ function upload() {
               <input type="email" placeholder='Email' />
             </div>
           </div>
-{/* 
-          <div className='container row'>
-            <div className='col-sm-4'><b>1. INITIAL FILE</b> (Compile Single Word File) Initial file will have following documents. A covering letter then acknowledgements, declaration of interest, funding details, reference number and date of approval from Institutional Ethics Committee, in that order.</div>
-            <div className='col-sm-4'>
-              <input type="file" onChange={(e) => setFile1(e.target.files[0])}/>
-              <p>please upload less than 5mb file</p>
-            </div>
-          </div> */}
-          {/* <br />
-          <div className='container row'>
-            <div className='col-sm-4'><b>2. TITLE PAGE (WORD FILE)</b></div>
-            <div className='col-sm-4'>
-              <input type="file" onChange={(e) => setFile2(e.target.files[0])}/>
-              <p>please upload less than 5mb file</p>
-            </div>
-          </div>
-          <br /> */}
 
           <div className='container row'>
-            <div className='col-sm-4'><b>3. MAIN FILE (WORD FILE)</b> (including abstract and key words, introduction, material and methods, results/observation, discussion, conclusions, references and tables at last each on separate page)</div>
             <div className='col-sm-4'>
-              <input type="file" onChange={(e) => setFile3(e.target.files[0])}/>
-              <p>please upload less than 5mb file</p>
+              <b>3. MAIN FILE (WORD FILE)</b> (including abstract and key words, introduction, material and methods, results/observation, discussion, conclusions, references and tables at last each on separate page)
+            </div>
+            <div className='col-sm-4'>
+              <input type="file" onChange={handleFileChange} />
+              <p>Please upload a file less than 5MB</p>
             </div>
           </div>
 
-
-          {/* <div className='container row'>
-            <div className='col-sm-4'><b>4. FIGURES AND FIGURE LEGENDS</b></div>
-
-            <div className='container row'>
-              <div className='col-sm-4'>Image 1 :</div>
-              <div className='col-sm-4'>
-                <input type="file" onChange={(e) => setFile4(e.target.files[0])}/>
-                <p>please upload less than 5mb file</p>
-              </div>
-            </div>
-            <div className='container row'>
-              <div className='col-sm-4'>Image 2 :</div>
-              <div className='col-sm-4'>
-                <input type="file" onChange={(e) => setFile5(e.target.files[0])}/>
-                <p>please upload less than 5mb file</p>
-              </div>
-            </div>
-            <div className='container row'>
-              <div className='col-sm-4'>Image 3 :</div>
-              <div className='col-sm-4'>
-                <input type="file" onChange={(e) => setFile6(e.target.files[0])}/>
-                <p>please upload less than 5mb file</p>
-              </div>
-            </div>
-            <div className='container row'>
-              <div className='col-sm-4'>Image 4 :</div>
-              <div className='col-sm-4'>
-                <input type="file" onChange={(e) => setFile7(e.target.files[0])}/>
-                <p>please upload less than 5mb file</p>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div className='container row'>
-            <div className='col-sm-4'><b>5. CONTRIBUTORS’ FORM (SCANEED SIGNED COPY)</b> Download Template</div>
-            <div className='col-sm-4'>
-              <input type="file" onChange={(e) => setFile8(e.target.files[0])}/>
-              <p>please upload less than 5mb file</p>
-            </div>
-          </div>
-          <br />
-          <div className='container row'>
-            <div className='col-sm-4'><b>Re-write the letters in captcha</b> Download Template</div>
-            <div className='col-sm-4'>
-              C X P B
-              <input type="text" />
-
-            </div>
-          </div> */}
-
-          <input type="submit" value="Upload" className='upload-pdf'/>
+          <input type="submit" value="Upload" className='upload-pdf' />
         </form>
       </div>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default upload
-
-
-// import React, { useState } from "react";
-// import axios from "axios";
-
-// function App() {
-//   // const [formData, setFormData] = useState({
-//   //   firstName: "",
-//   //   lastName: "",
-//   //   file: null,
-//   // });
-
-//   const [file, setFile] = useState("");
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({ ...formData, [name]: value });
-//   };
-
-//   const handleFileChange = (e) => {
-//     setFormData({ ...formData, file: e.target.files[0] });
-//   };
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const formData = new FormData();
-//     formData.append("file", file);
-//     console.log(formData);
-//     console.log(file);
-//     try {
-//       await axios.post("http://192.168.0.105:3100/v1/uploadPDF", formData, {
-//         headers: {
-//           "Content-Type": "multipart/form-data",
-//         },
-//       });
-//       alert("PDF uploaded successfully.");
-//     } catch (error) {
-//       console.error(error);
-//       alert("Error uploading PDF.");
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h1>Upload Form</h1>
-//       <form onSubmit={handleSubmit} encType="multipart/form-data">
-//         <div>
-//           <label htmlFor="firstName">First Name:</label>
-//           <input
-//             type="text"
-//             id="firstName"
-//             name="firstName"
-//             // value={formData.firstName}
-//             // onChange={handleChange}
-//           />
-//         </div>
-//         <div>
-//           <label htmlFor="lastName">Last Name:</label>
-//           <input
-//             type="text"
-//             id="lastName"
-//             name="lastName"
-//             // onChange={handleChange}
-//           />
-//         </div>
-//         <div>
-//           <label htmlFor="file">Upload File:</label>
-//           <input
-//             type="file"
-//             id="file"
-//             name="file"
-//             // accept="application/pdf"
-//             onChange={(e) => setFile(e.target.files[0])}
-//           />
-//         </div>
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default App;
+export default Upload;
