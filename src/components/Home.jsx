@@ -6,6 +6,11 @@ import { Link } from "react-router-dom";
 
 function Home() {
   const Img ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723531257/adyp_cover_o3dgc4.png"
+  const google ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723540226/google_acukis.png"
+  const academia ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/academia_rm0ke5.png"
+  const rgate ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/rgate_uvnqo3.png"
+  const crossref ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/crossref_n8k4ty.png"
+  const worldcat ="https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/worldcat_r1wzyw.png"
 
   const fetchPdf = async () => {
     try {
@@ -114,31 +119,31 @@ function Home() {
             <ul className="indexing_icons">
               <li>
                 <a href="https://support.google.com/webmasters/answer/7645831?hl=en">
-                  <img src="././google.png" alt="" />
+                  <img src={google} alt="" />
                 </a>
               </li>
               <li>
                 <a href="https://www.crossref.org/documentation/principles-practices/journals/">
-                  <img src="././crossref.png" alt="" />
+                  <img src={crossref} alt="" />
                 </a>
                 {/* <p>Cross Ref</p> */}
               </li>
               <li>
                 <a href="https://search.worldcat.org/title/The-art-of-indexing/oclc/29258238">
-                  <img src="././worldcat.png" alt="" />
+                  <img src={worldcat} alt="" />
                 </a>
                 {/* <p>WorldCat</p> */}
               </li>
               <li>
                 <a href="https://www.researchgate.net/">
-                  <img src="././rgate.png" alt="" />
+                  <img src={rgate} alt="" />
                 </a>
                 {/* <p>Research Gate</p> */}
               </li>
 
               <li>
                 <a href="https://www.academia.edu/45684909/OPEN_ACCESS_JOURNALS_AND_INDEXING">
-                  <img src="././academia.png" alt="" />
+                  <img src={academia} alt="" />
                 </a>
                 {/* <p>Academia</p> */}
               </li>
