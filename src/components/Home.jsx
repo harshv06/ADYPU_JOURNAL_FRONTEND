@@ -105,9 +105,9 @@ function Home() {
             <hr />
             <h4>Latest Publication</h4>
             <ol>
-              <li>Publication 1</li>
-              <li>Publication 2</li>
-              <li>Publication 3</li>
+              <li>Publications 1</li>
+              <li>Publications 2</li>
+              <li>Publications 3</li>
             </ol>
             <hr />
             <h4>Indexing</h4>
