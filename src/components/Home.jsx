@@ -36,7 +36,7 @@ function Home() {
       <div className="container main-container">
         <div className="row">
           <div className="container-text col-md-3">
-            <p>Home / Archives / Vol. 11 No. 2 (2024): March-April</p>
+            {/* <p>Home / Archives / Vol. 11 No. 2 (2024): March-April</p> */}
             <h3>Vol 11 No. 2</h3>
             <img src={Img} className="cover-image" alt="ADYP Cover" />
             {/* <img src="https://drive.google.com/file/d/116ccnz8eCP_VDLKOEHSB-rKg_erynxOy/view?usp=drive_link" className='cover-image' alt="" /> */}

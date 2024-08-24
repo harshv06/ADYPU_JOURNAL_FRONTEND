@@ -8,24 +8,25 @@ const Editorial = () => {
     <>
       <Navbar />
       <div
-      className="container"
+        className="container"
         style={{
-          margin: 20,
-          marginLeft:100
+          // margin: 20,
+          // marginLeft:100
         }}
       >
         <h4>Chief Editor :</h4>
         <ol>
           <li>
-            Dr. Saniya Ansari, Associate Professor, E & TC Engineering, Ph.D.
-            (ECE)
-          </li>
-          <li>
             Dr. F B Sayyad, Professor, Mechanical Engineering, Ph.D. (Mechanical
             Engineering)
           </li>
+          <li>
+
+            Dr. Saniya Ansari, Associate Professor, E & TC Engineering, Ph.D.
+            (ECE)
+          </li>
         </ol>
-<hr />
+        <hr />
         <h4>Associate Editors :</h4>
         <ol>
           <li>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</li>
@@ -45,7 +46,7 @@ const Editorial = () => {
             Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, ADYPSOE Pune
           </li>
           <li>
-            Dr. Atul Ingole, Professor, Mechanical Engineering, ADYPSOE, Pune
+            Dr. Sanjay Khomde, Professor, Mechanical Engineering, ADYPSOE, Pune
           </li>
           <li>
             Dr. Nagesh Shelke, Professor, Civil Engineering, ADYPSOE, Pune
@@ -54,12 +55,12 @@ const Editorial = () => {
             Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
           </li>
         </ol>
-<hr />
+        <hr />
         <h4>Reviewer Board :</h4>
         <ol>
           <li>Dr. Smita Daterao, Assistant Professor, Civil, ADYPSOE Pune</li>
           <li>
-            Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune 
+            Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune
           </li>
           <li>Dr.
             Tushar Phadtare, Associate Professor, Computer Engineering, ADYPSOE,
@@ -127,7 +128,7 @@ const Editorial = () => {
             ADYPSOE, Pune
           </li>
         </ol>
-<hr />
+        <hr />
         <h4>Topics Covered</h4>
         <ul>
           <li>Image Processing1</li>
@@ -139,7 +140,7 @@ const Editorial = () => {
           <li>Internet of Things</li>
           <li>Robotics and Automation</li>
         </ul>
-<hr />
+        <hr />
         <h4>Author Guidelines</h4>
         <ul>
           <li>
@@ -161,7 +162,7 @@ const Editorial = () => {
           </li>
         </ul>
       </div>
-      <Footer/>
+      <Footer />
     </>
 
 
