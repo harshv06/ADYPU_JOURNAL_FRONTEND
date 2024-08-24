@@ -24,6 +24,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/review" element={<Review />} />
           <Route path="/author_guide" element={<AuthorGuide />} />
+          <Route path="/test" element={<Home />} />
 
         </Routes>
       </BrowserRouter>
