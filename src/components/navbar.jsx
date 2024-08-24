@@ -95,16 +95,16 @@ function Navbar() {
                       <Link to="/author_guide" className="nav-link">
                         Author Guidelines
                       </Link>
-                    </li> //Temp
-                    <li>
+                    </li>
+                    {/* <li>
                       <Link to="/review" className="nav-link">
                         Review Policy
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         href="././Copyright-Form.pdf"
-                        className="view-pdf dropdown-item"
+                        className="nav-link"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -114,7 +114,7 @@ function Navbar() {
                     <li>
                       <a
                         href="././paper-template.pdf"
-                        className="view-pdf dropdown-item"
+                        className="nav-link"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

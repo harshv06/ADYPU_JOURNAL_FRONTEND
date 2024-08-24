@@ -56,6 +56,11 @@
     font-weight: 500;
 }
 
+.nav-link:hover{
+    background-color: white;
+    color: rgb(179, 25, 25);
+}
+
 marquee{
     margin-bottom: 40px;
 

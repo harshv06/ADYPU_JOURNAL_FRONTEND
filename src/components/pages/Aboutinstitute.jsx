@@ -10,8 +10,8 @@ function Aboutinstitute() {
       <Navbar />
 
       <div className="container">
-        <h5>About The Institute</h5>
-        <h1>Ajeenkya DY Patil School Of Engineering, Pune</h1>
+        <h1 style={{color:'brown'}}>About The Institute</h1>
+        {/* <h1>Ajeenkya DY Patil School Of Engineering, Pune</h1> */}
 
         <div className=" row">
           <div className=" col-md-6" style={{ textAlign: "justify" }}>
@@ -63,7 +63,7 @@ function Aboutinstitute() {
             
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-6" style={{ textAlign: "justify" }}>
             <p>
               Our students champion the synthesis of theory and practice while
               emphasizing creativity and hands-on application. Our courses
