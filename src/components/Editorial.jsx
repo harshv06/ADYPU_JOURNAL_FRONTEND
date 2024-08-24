@@ -1,6 +1,7 @@
 import React from "react";
 // import {StyleSheet} from 'react'
 import Navbar from "./navbar";
+import "./Editorial.css"
 import Footer from "./Footer";
 
 const Editorial = () => {
@@ -15,7 +16,25 @@ const Editorial = () => {
         }}
       >
         <h4>Chief Editor :</h4>
-        <ol>
+        <div className="container row main-editor">
+          <div className="col-md-6">
+            <img
+              className="editor-image"
+              src="src\Images\principal.jpg"
+              alt=""
+            />
+            <h4>Dr. F B Sayyad, Professor, Mechanical Engineering, Ph.D. (Mechanical
+              Engineering)</h4>
+          </div>
+          <div className="col-md-6">
+            <img src="src\Images\sa.jpg" alt="" 
+              className="editor-image"
+              />
+            <h4>Dr. Saniya Ansari, Associate Professor, E & TC Engineering, Ph.D.
+              (ECE)</h4>
+          </div>
+        </div>
+        {/* <ol>
           <li>
             Dr. F B Sayyad, Professor, Mechanical Engineering, Ph.D. (Mechanical
             Engineering)
@@ -25,7 +44,7 @@ const Editorial = () => {
             Dr. Saniya Ansari, Associate Professor, E & TC Engineering, Ph.D.
             (ECE)
           </li>
-        </ol>
+        </ol> */}
         <hr />
         <h4>Associate Editors :</h4>
         <ol>
@@ -139,6 +158,22 @@ const Editorial = () => {
           <li>Signal Processing</li>
           <li>Internet of Things</li>
           <li>Robotics and Automation</li>
+          <li>Data Analytics</li>
+          <li>Smart Computing</li>
+          <li>Internet of Things (IoT)</li>
+          <li>Recent Engineering & Technology</li>
+          <li>Information Technology</li>
+          <li>Computer Vision</li>
+          <li>CAD/CAM/CIM</li>
+          <li>Data Base Management System</li>
+          <li>Civil Engineering and Applications</li>
+          <li>Mechanical Engineering and Applications</li>
+          <li>Human-Computer Interaction (HCI)</li>
+          <li>Structural Engineering</li>
+          <li>Image Analysis and Processing</li>
+          <li>Mobile Computing and Applications</li>
+          <li>Multimedia Communications</li>
+          <li>Network Modelling and Simulation</li>
         </ul>
         <hr />
         <h4>Author Guidelines</h4>

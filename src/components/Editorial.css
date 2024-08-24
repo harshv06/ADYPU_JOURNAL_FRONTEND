@@ -1,0 +1,12 @@
+.editor-image {
+    width: 250px;
+    height: 287px;
+    object-fit: cover;
+    align-items: center;
+}
+
+.main-editor{
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
