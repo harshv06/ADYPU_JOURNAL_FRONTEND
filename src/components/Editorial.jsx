@@ -5,6 +5,10 @@ import "./Editorial.css"
 import Footer from "./Footer";
 
 const Editorial = () => {
+
+  const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/principal_vm3ahd.jpg"
+  const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/sa_ovqcox.jpg"
+
   return (
     <>
       <Navbar />
@@ -20,7 +24,7 @@ const Editorial = () => {
           <div className="col-md-6">
             <img
               className="editor-image"
-              src="src\Images\principal.jpg"
+              src={img1}
               alt=""
             />
             <h5>Dr. F B Sayyad, Professor, <br /> Mechanical Engineering, Ph.D. (Mechanical
@@ -28,6 +32,7 @@ const Editorial = () => {
           </div>
           <div className="col-md-6">
             <img src="src\Images\sa.jpg" alt=""
+
               className="editor-image"
             />
             <h5>Dr. Saniya Ansari, <br /> Associate Professor, E & TC Engineering, Ph.D.
