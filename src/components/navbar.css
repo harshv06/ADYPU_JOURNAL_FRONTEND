@@ -11,11 +11,18 @@
 }
 
 .nav-container{
-    padding: 0;    
+    padding: 0;   
+    justify-content: space-around; 
 }
+/* 
+#navbarSupportedContent.collapse.navbar-collapse{
+    justify-content: space-evenly;
+} */
+
 
 .nav-tab{
     justify-content: center;
+    /* text-align: center; */
 }
 
 .logo{
@@ -52,7 +59,8 @@
 .nav-link{
     color: white;
     text-decoration: none;
-    margin-right: 5vw;
+    /* margin-right: 5vw; */
+    /* justify-content: space-around; */
     font-weight: 500;
 }
 
@@ -82,12 +90,32 @@ marquee{
     color: white;
     border-bottom: 1px solid rgb(195, 43, 43);
     text-decoration: none;
+    /* width: auto ;? */
 }
 
 .dropdown-menu a{
     color: white;
     text-decoration: none;
     border-bottom: 1px solid rgb(195, 43, 43);
-
     box-shadow: none;
+    width: auto;
+}
+
+.dropdown-menu li{
+    width: auto;
+}
+
+.nav-item{
+    /* justify-content: center;
+    text-align: center;
+    margin: auto; */
+    /* background-color: green; */
+    width: auto;
+    text-align: center  ;
+}
+
+.navbar-nav {
+    justify-content: space-evenly;
+    width: 100%;
+    text-align: center;
 }

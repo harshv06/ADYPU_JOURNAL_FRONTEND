@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const Img="https://res.cloudinary.com/drv3etzyg/image/upload/v1723531249/logo_ubrnvq.webp"
+  const Img = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723531249/logo_ubrnvq.webp"
   return (
     <>
       <div className="container justify-content-center p-4" id="nav-tab">
@@ -40,7 +40,7 @@ function Navbar() {
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse  " id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <ul class="navbar-nav  ">
                 <li class="nav-item">
                   <Link to="/" className="nav-link">
                     Home
@@ -134,7 +134,7 @@ function Navbar() {
                   >
                     Submission
                   </a>
-                  <ul class="dropdown-menu">
+                  <ul class="dropdown-menu submission">
                     <Link to="/upload" className="dropdown-item">
                       Upload
                     </Link>

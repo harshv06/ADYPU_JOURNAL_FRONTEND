@@ -27,15 +27,16 @@ const Editorial = () => {
               src={img1}
               alt=""
             />
-            <h4>Dr. F B Sayyad, Professor, Mechanical Engineering, Ph.D. (Mechanical
-              Engineering)</h4>
+            <h5>Dr. F B Sayyad, Professor, <br /> Mechanical Engineering, Ph.D. (Mechanical
+              Engineering)</h5>
           </div>
           <div className="col-md-6">
-            <img src={img2} alt="" 
+            <img src="src\Images\sa.jpg" alt=""
+
               className="editor-image"
-              />
-            <h4>Dr. Saniya Ansari, Associate Professor, E & TC Engineering, Ph.D.
-              (ECE)</h4>
+            />
+            <h5>Dr. Saniya Ansari, <br /> Associate Professor, E & TC Engineering, Ph.D.
+              (ECE)</h5>
           </div>
         </div>
         {/* <ol>
@@ -51,6 +52,71 @@ const Editorial = () => {
         </ol> */}
         <hr />
         <h4>Associate Editors :</h4>
+
+        <div className="container row associate-editor">
+          <div className="col-md-3">
+            <img
+              className="editor-image"
+              src="src\Images\koli.png"
+              alt=""
+            />
+            <h5>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</h5>
+          </div>
+          <div className="col-md-3">
+            <img src="src\Images\pankaj-agarkar.jpg" alt=""
+              className="editor-image"
+            />
+            <h5>Dr. Pankaj Agarkar, Associate Professor, Computer Engineering, ADYPSOE, Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img
+              className="editor-image"
+              src="src\Images\shreepad.png"
+              alt=""
+            />
+            <h5>Dr. Shreepad Sarange, Associate Professor, Mechanical Engineering, ADYPSOE, Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img
+              // src="src\Images\sa.jpg" alt=""   
+              className="editor-image"
+            />
+            <h5>Dr. Rahul Bachute, Associate Professor, Mechanical Engineering, ADYPSOE, Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img src="src\Images\bhagyashree-maam.jpg" alt=""
+              className="editor-image"
+            />
+            <h5>Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, ADYPSOE Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img
+              className="editor-image"
+              // src="src\Images\principal.jpg"
+              alt=""
+            />
+            <h5>Dr. Sanjay Khomde, Professor, Mechanical Engineering, ADYPSOE, Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img src="src\Images\shelke.png" alt=""
+              className="editor-image"
+            />
+            <h5>Dr. Nagesh Shelke, Professor, Civil Engineering, ADYPSOE, Pune
+            </h5>
+          </div>
+          <div className="col-md-3">
+            <img src="src\Images\khairnar.png" alt=""
+              className="editor-image"
+            />
+            <h5>Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
+              )</h5>
+          </div>
+        </div>
         <ol>
           <li>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</li>
           <li>
@@ -79,7 +145,7 @@ const Editorial = () => {
           </li>
         </ol>
         <hr />
-        <h4>Reviewer Board :</h4>
+        <h4>Advisory Board :</h4>
         <ol>
           <li>Dr. Smita Daterao, Assistant Professor, Civil, ADYPSOE Pune</li>
           <li>
@@ -154,30 +220,41 @@ const Editorial = () => {
         <hr />
         <h4>Topics Covered</h4>
         <ul>
-          <li>Image Processing1</li>
-          <li>AI & ML</li>
-          <li>Computer Vision</li>
-          <li>Applied Science</li>
-          <li>VLSI & Embedded System</li>
-          <li>Signal Processing</li>
-          <li>Internet of Things</li>
-          <li>Robotics and Automation</li>
-          <li>Data Analytics</li>
-          <li>Smart Computing</li>
-          <li>Internet of Things (IoT)</li>
-          <li>Recent Engineering & Technology</li>
-          <li>Information Technology</li>
-          <li>Computer Vision</li>
-          <li>CAD/CAM/CIM</li>
-          <li>Data Base Management System</li>
-          <li>Civil Engineering and Applications</li>
-          <li>Mechanical Engineering and Applications</li>
-          <li>Human-Computer Interaction (HCI)</li>
-          <li>Structural Engineering</li>
-          <li>Image Analysis and Processing</li>
-          <li>Mobile Computing and Applications</li>
-          <li>Multimedia Communications</li>
-          <li>Network Modelling and Simulation</li>
+          <div className="row">
+            <div className="col-md-4">
+              <li>Image Processing1</li>
+              <li>AI & ML</li>
+              <li>Computer Vision</li>
+              <li>Applied Science</li>
+              <li>VLSI & Embedded System</li>
+              <li>Signal Processing</li>
+              <li>Internet of Things</li>
+              <li>Robotics and Automation</li>
+            </div>
+            <div className="col-md-4">
+              <li>Data Analytics</li>
+              <li>Smart Computing</li>
+              <li>Internet of Things (IoT)</li>
+              <li>Recent Engineering & Technology</li>
+              <li>Information Technology</li>
+              <li>Computer Vision</li>
+              <li>CAD/CAM/CIM</li>
+              <li>Data Base Management System</li>
+            </div>
+            <div className="col-md-4">
+
+              <li>Civil Engineering and Applications</li>
+              <li>Mechanical Engineering and Applications</li>
+              <li>Human-Computer Interaction (HCI)</li>
+              <li>Structural Engineering</li>
+              <li>Image Analysis and Processing</li>
+              <li>Mobile Computing and Applications</li>
+              <li>Multimedia Communications</li>
+              <li>Network Modelling and Simulation</li>
+            </div>
+          </div>
+
+
         </ul>
         <hr />
         <h4>Author Guidelines</h4>

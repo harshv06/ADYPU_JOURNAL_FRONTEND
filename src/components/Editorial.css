@@ -1,12 +1,26 @@
 .editor-image {
-    width: 250px;
-    height: 287px;
+    width: 150px;
+    height: 187px;
     object-fit: cover;
     align-items: center;
+    /* mix-blend-mode:darken; */
+    /* filter: invert (100%); */
+    /* mix-blend-mode:multiply; */
+    /* background-color: transparent; */
+
 }
 
 .main-editor{
     align-items: center;
     text-align: center;
     padding: 20px;
+}
+
+.associate-editor{
+    text-align: center;
+    /* padding: 20px; */
+}
+
+.associate-editor img{
+    margin-top: 20px;
 }
