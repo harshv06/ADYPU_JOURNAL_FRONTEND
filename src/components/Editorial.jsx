@@ -8,6 +8,12 @@ const Editorial = () => {
 
   const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/principal_vm3ahd.jpg"
   const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/sa_ovqcox.jpg"
+  const img3="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/koli_usy5db.png"
+  const img4="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/pankaj-agarkar_dcuuoy.jpg"
+  const img5="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693146/shreepad_c4dsmu.png"
+  const img6="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693144/bhagyashree-maam_qdjbjm.jpg"
+  const img7="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/shelke_dwoskp.png"
+  const img8="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/khairnar_jyfegv.png"
 
   return (
     <>
@@ -31,7 +37,7 @@ const Editorial = () => {
               Engineering)</h5>
           </div>
           <div className="col-md-6">
-            <img src="src\Images\sa.jpg" alt=""
+            <img src={img2} alt=""
 
               className="editor-image"
             />
@@ -57,13 +63,13 @@ const Editorial = () => {
           <div className="col-md-3">
             <img
               className="editor-image"
-              src="src\Images\koli.png"
+              src={img3}
               alt=""
             />
             <h5>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</h5>
           </div>
           <div className="col-md-3">
-            <img src="src\Images\pankaj-agarkar.jpg" alt=""
+            <img src={img4} alt=""
               className="editor-image"
             />
             <h5>Dr. Pankaj Agarkar, Associate Professor, Computer Engineering, ADYPSOE, Pune
@@ -72,7 +78,7 @@ const Editorial = () => {
           <div className="col-md-3">
             <img
               className="editor-image"
-              src="src\Images\shreepad.png"
+              src={img5}
               alt=""
             />
             <h5>Dr. Shreepad Sarange, Associate Professor, Mechanical Engineering, ADYPSOE, Pune
@@ -87,7 +93,7 @@ const Editorial = () => {
             </h5>
           </div>
           <div className="col-md-3">
-            <img src="src\Images\bhagyashree-maam.jpg" alt=""
+            <img src={img6} alt=""
               className="editor-image"
             />
             <h5>Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, ADYPSOE Pune
@@ -103,21 +109,21 @@ const Editorial = () => {
             </h5>
           </div>
           <div className="col-md-3">
-            <img src="src\Images\shelke.png" alt=""
+            <img src={img7} alt=""
               className="editor-image"
             />
             <h5>Dr. Nagesh Shelke, Professor, Civil Engineering, ADYPSOE, Pune
             </h5>
           </div>
           <div className="col-md-3">
-            <img src="src\Images\khairnar.png" alt=""
+            <img src={img8} alt=""
               className="editor-image"
             />
             <h5>Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
-              )</h5>
+              </h5>
           </div>
         </div>
-        <ol>
+        {/* <ol>
           <li>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</li>
           <li>
             Dr. Pankaj Agarkar, Associate Professor, Computer Engineering,
@@ -216,7 +222,7 @@ const Editorial = () => {
             Dr. Nilesh Thorat, Assistant Professor, Computer Engineering,
             ADYPSOE, Pune
           </li>
-        </ol>
+        </ol> */}
         <hr />
         <h4>Topics Covered</h4>
         <ul>
