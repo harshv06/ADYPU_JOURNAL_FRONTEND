@@ -47,7 +47,7 @@ function Aboutinstitute() {
 
           <div className="col-md-6">
             <img
-              src="https://shiksha-static-mediadata.s3.ap-southeast-1.amazonaws.com/mediadata/reviewDocument/images/1694539993420ajeenkya-dy-patil-university-school-of-management-pune-221712.jpg"
+              src="https://cdn-eu.aglty.io/sunstoneuniversity/Attachments/NewItems/adypu-16x9_20230306095534_0.jpg"
               alt=""
             />
           </div>

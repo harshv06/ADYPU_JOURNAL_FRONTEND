@@ -10,6 +10,7 @@ import Contact from "./components/contact/Contact";
 import Editorial from "./components/Editorial";
 import Review from "./components/Review/Review";
 import AuthorGuide from "./components/Author_Guid/AuthorGuide";
+import ApplyReviewer from "./components/ApplyReviewer/ApplyReviewer";
 
 function App() {
   return (
@@ -24,8 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/review" element={<Review />} />
           <Route path="/author_guide" element={<AuthorGuide />} />
-          <Route path="/test" element={<Home />} />
-
+          <Route path="/apply-reviewer" element={<ApplyReviewer/>}/>
         </Routes>
       </BrowserRouter>
     </>

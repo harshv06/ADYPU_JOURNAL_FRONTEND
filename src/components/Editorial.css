@@ -1,6 +1,6 @@
 .editor-image {
-    width: 150px;
-    height: 187px;
+    width: 100px;
+    height: 127px;
     object-fit: cover;
     align-items: center;
     /* mix-blend-mode:darken; */
@@ -13,7 +13,9 @@
 .main-editor{
     align-items: center;
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
+    margin-top: -30px;
+    margin-bottom: -30px;
 }
 
 .associate-editor{
@@ -22,5 +24,14 @@
 }
 
 .associate-editor img{
-    margin-top: 20px;
+    /* margin-top: 20px; */
+}
+
+.managing-editor{
+    text-align: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: auto;
+    margin-top: -50px;
+    margin-bottom: -30px;
 }
