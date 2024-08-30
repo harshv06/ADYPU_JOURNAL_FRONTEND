@@ -5,6 +5,16 @@ import "./Editorial.css"
 import Footer from "./Footer";
 
 const Editorial = () => {
+
+  const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/principal_vm3ahd.jpg"
+  const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/sa_ovqcox.jpg"
+  const img3="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/koli_usy5db.png"
+  const img4="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/pankaj-agarkar_dcuuoy.jpg"
+  const img5="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693146/shreepad_c4dsmu.png"
+  const img6="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693144/bhagyashree-maam_qdjbjm.jpg"
+  const img7="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/shelke_dwoskp.png"
+  const img8="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/khairnar_jyfegv.png"
+
   return (
     <>
       <Navbar />
@@ -20,7 +30,7 @@ const Editorial = () => {
           <div className="col-md-6">
             <img
               className="editor-image"
-              src="src\Images\principal.jpg"
+              src={img1}
               alt=""
             />
             <h5>Dr. F B Sayyad, Professor, <br /> Mechanical Engineering, Ph.D. (Mechanical
@@ -65,7 +75,7 @@ const Editorial = () => {
           {/* <div className="col-md-3">
             <img
               className="editor-image"
-              src="src\Images\koli.png"
+              src={img3}
               alt=""
             />
             <h5>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</h5>
