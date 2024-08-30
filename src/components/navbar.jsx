@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const Img = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723531249/logo_ubrnvq.webp"
+  const Logo2 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/logo2_ugvx2c.jpg"
   return (
     <>
       <div className="justify-content-center p-3" id="nav-tab">
@@ -21,7 +22,7 @@ function Navbar() {
             </p>
           </div>
           <div className="col-md-1">
-          <img src='src\Images\logo2.jpg' alt="" className="logo2" />
+          <img src={Logo2} alt="" className="logo2" />
 
           </div>
         </div>

@@ -5,7 +5,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const Img = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723531257/adyp_cover_o3dgc4.png"
+  const Cover = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png"
+  const BGIMG = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/bg_lakuks.jpg"
   const google = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540226/google_acukis.png"
   const academia = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/academia_rm0ke5.png"
   const rgate = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/rgate_uvnqo3.png"
@@ -34,14 +35,14 @@ function Home() {
     <>
       <Nav />
       <div className="bg">
-        <img src="src\Images\BG.jpg" alt="" className="bg-image" />
+        <img src={BGIMG} alt="" className="bg-image" />
       </div>
       <div className="container main-container">
         <div className="row">
           <div className="container-text col-md-3">
             {/* <p>Home / Archives / Vol. 11 No. 2 (2024): March-April</p> */}
             {/* <h3>Vol 1 No. 1</h3> */}
-            <img src='src\Images\adyp_cover.png' className="cover-image" alt="ADYP Cover" />
+            <img src={Cover} className="cover-image" alt="ADYP Cover" />
             {/* <img src="https://drive.google.com/file/d/116ccnz8eCP_VDLKOEHSB-rKg_erynxOy/view?usp=drive_link" className='cover-image' alt="" /> */}
             {/* <p>Published : 09/03/2024</p> */}
             <hr />
