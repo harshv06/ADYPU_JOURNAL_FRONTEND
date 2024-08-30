@@ -6,15 +6,15 @@ import Footer from "./Footer";
 
 const Editorial = () => {
 
-  const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/principal_vm3ahd.jpg"
-  const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1724489706/sa_ovqcox.jpg"
-  const img3="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/koli_usy5db.png"
-  const img4="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/pankaj-agarkar_dcuuoy.jpg"
-  const img5="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693146/shreepad_c4dsmu.png"
-  const img6="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693144/bhagyashree-maam_qdjbjm.jpg"
-  const img7="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/shelke_dwoskp.png"
-  const img8="https://res.cloudinary.com/drv3etzyg/image/upload/v1724693145/khairnar_jyfegv.png"
-
+  const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/principal_waxtha.png"
+  const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/saniya_kx1ewa.png"
+  const img3="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/shobha-rupanar_xykf2a.png"
+  const img4="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/pankaj-agarkar_aotp0f.png"
+  const img5="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/rohit-garad_tkvkvm.png"
+  const img6="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009845/rahul-bachute_syvvmf.png"
+  const img7="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/bhagrayshree_dpnidg.png"
+  const img8="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009701/karodpati_r40i0j.jpg"
+  const img9="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/khairnar_wnbesi.png"
   return (
     <>
       <Navbar />
@@ -25,8 +25,8 @@ const Editorial = () => {
           // marginLeft:100
         }}
       >
-        <h4>Chief Editor :</h4>
-        <div className="container row main-editor">
+        <h4>Chief Editors :</h4>
+        <div className="row main-editor">
           <div className="col-md-6">
             <img
               className="editor-image"
@@ -38,11 +38,23 @@ const Editorial = () => {
           </div>
           <div className="col-md-6">
             <img src={img2} alt=""
-
               className="editor-image"
             />
             <h5>Dr. Saniya Ansari, <br /> Associate Professor, E & TC Engineering, Ph.D.
               (ECE)</h5>
+          </div>
+          <hr />
+        </div>
+
+        <h4>Managing Editor</h4>
+        <div className=" row managing-editor">
+
+          <div className="">
+            <img src={img3} alt=""
+              className="editor-image"
+            />
+            <h5>Dr. Shobha Rupanar, <br /> Assistant Professor, Engineering Chemistery, shobha.rupanar@dypic.in
+            </h5>
           </div>
         </div>
         {/* <ol>
@@ -60,67 +72,67 @@ const Editorial = () => {
         <h4>Associate Editors :</h4>
 
         <div className="container row associate-editor">
-          <div className="col-md-3">
+          {/* <div className="col-md-3">
             <img
               className="editor-image"
               src={img3}
               alt=""
             />
             <h5>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</h5>
-          </div>
-          <div className="col-md-3">
+          </div> */}
+          <div className="col-md-2">
             <img src={img4} alt=""
               className="editor-image"
             />
-            <h5>Dr. Pankaj Agarkar, Associate Professor, Computer Engineering, ADYPSOE, Pune
+            <h5>Dr. Pankaj Agarkar, Associate Professor, Computer Engineering, hod_comp@dypic.in
             </h5>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <img
               className="editor-image"
               src={img5}
               alt=""
             />
-            <h5>Dr. Shreepad Sarange, Associate Professor, Mechanical Engineering, ADYPSOE, Pune
+            <h5>Prof. Rohit Garad, Assistant Professor, Mechanical Engineering, hod_mech@dypic.in
             </h5>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <img
-              // src="src\Images\sa.jpg" alt=""   
+              src={img6} alt=""
               className="editor-image"
             />
-            <h5>Dr. Rahul Bachute, Associate Professor, Mechanical Engineering, ADYPSOE, Pune
+            <h5>Dr. Rahul Bachute, Associate Professor, Automobile Engineering, hodautosoet@dypic.in
             </h5>
           </div>
-          <div className="col-md-3">
-            <img src={img6} alt=""
-              className="editor-image"
-            />
-            <h5>Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, ADYPSOE Pune
-            </h5>
-          </div>
-          <div className="col-md-3">
-            <img
-              className="editor-image"
-              // src="src\Images\principal.jpg"
-              alt=""
-            />
-            <h5>Dr. Sanjay Khomde, Professor, Mechanical Engineering, ADYPSOE, Pune
-            </h5>
-          </div>
-          <div className="col-md-3">
+          <div className="col-md-2">
             <img src={img7} alt=""
               className="editor-image"
             />
-            <h5>Dr. Nagesh Shelke, Professor, Civil Engineering, ADYPSOE, Pune
+            <h5>Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, hod_aids@dypic.in
             </h5>
           </div>
-          <div className="col-md-3">
+          {/* <div className="col-md-3">
+            <img
+              className="editor-image"
+              src="src\Images\sanjay-khonde.jpg"
+              alt=""
+            />
+            <h5>Dr. Sanjay Khonde, Professor, Mechanical Engineering, ADYPSOE, Pune
+            </h5>
+          </div> */}
+          <div className="col-md-2">
             <img src={img8} alt=""
               className="editor-image"
             />
-            <h5>Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
-              </h5>
+            <h5>Prof. Lt. Col. Sanjay Karodpati, Professor, Civil Engineering, hod_civil@dypic.in
+            </h5>
+          </div>
+          <div className="col-md-2">
+            <img src={img9} alt=""
+              className="editor-image"
+            />
+            <h5>Dr. S M Khairnar, Professor, Engineering Mathematics,hodfe@dypic.in
+            </h5>
           </div>
         </div>
         {/* <ol>
@@ -149,80 +161,104 @@ const Editorial = () => {
           <li>
             Dr. S M Khairnar, Professor, Engineering Mathematics, ADYPSOE, Pune
           </li>
-        </ol>
+        </ol> */}
         <hr />
         <h4>Advisory Board :</h4>
-        <ol>
-          <li>Dr. Smita Daterao, Assistant Professor, Civil, ADYPSOE Pune</li>
-          <li>
-            Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune
-          </li>
-          <li>Dr.
-            Tushar Phadtare, Associate Professor, Computer Engineering, ADYPSOE,
-            Pune</li>
-          <li>
-            Dr. Shobha Rupnar, Assistant Professor, Applied Science, ADYPSOE
-            Pune
-          </li>
-          <li>
-            Dr. Kailas Tehare, Assistant Professor, Applied Science, ADYPSOE
-            Pune
-          </li>
-          <li>
-            Dr. Niranjan Shegaonkar, Associate Professor, Mechanical
-            Engineering, ADYPSOE, Pune
-          </li>
-          <li>
-            Dr. Deepti, Assistant Professor, Computer Engineering, ADYPSOE Pune
-          </li>
-          <li>
-            Dr. Dilip More, Associate Professor, Mechanical Engineering,
-            ADYPSOE, Pune
-          </li>
-          <li>
-            Dr. Sanjay Khonde, Professor, E & TC Engineering, ADYPSOE, Pune
-          </li>
-          <li>Dr Lalat Indu Giri, Assistant professor, NIT Goa</li>
-          <li>
-            Dr S A Khan, Professor in Mechanical Engineering, Islamic university
-            Malaysia
-          </li>
-          <li>
-            Dr Israr Mohammad, Professor in Mechanical Engineering, Maryam
-            Abacha American university of Nigeria
-          </li>
-          <li>
-            Dr. Vidhya Patil, Professor in Civil Engineering, AISSMSCOE, Pune
-          </li>
-          <li>
-            Dr Sanjay Kulkarni, Professor in Civil Engineering, Symbiosis
-            college, Pune
-          </li>
-          <li>
-            Dr. Dhananjay Upasani, Professor in E & TC Engineering, Samarth
-            group Institutions, COE, Belhe, Pune
-          </li>
-          <li>
-            Dr. Mrunal Bachute, Professor, E & TC, Symbiosis University, Lavale
-            Pune
-          </li>
-          <li>Dr. Vishal Puranik, Assistant Professor, E & TC, MITAOE, Pune</li>
-          <li>
-            Dr. Sharmeela Chennaipan, Professor, Electrical Engineering, Chennai
-          </li>
-          <li>
-            Dr. Ankush Kadu, Assistant Professor, Electrical Engineering,
-            ADYPSOE, Pune
-          </li>
-          <li>
-            Dr. Kanchan Vaidhya, Assistant Professor, E & TC Engineering,
-            ADYPSOE, Pune
-          </li>
-          <li>
-            Dr. Nilesh Thorat, Assistant Professor, Computer Engineering,
-            ADYPSOE, Pune
-          </li>
-        </ol> */}
+        <div className="container row">
+
+          <div className="col-md-6">
+            <ul>
+
+              <li>
+                Dr. Nagesh Shelke, Professor, Civil Engineering, ADYPSOE, Pune
+              </li>
+              <li>Dr. Smita Daterao, Assistant Professor, Civil, ADYPSOE Pune</li>
+              <li>
+                Dr. Pallavi Kharat, Assistant Professor, Civil, ADYPSOE Pune
+              </li>
+              <li>Dr.
+                Tushar Phadtare, Associate Professor, Computer Engineering, ADYPSOE,
+                Pune</li>
+              <li>
+                Dr. Shobha Rupanar, Assistant Professor, Applied Science, ADYPSOE
+                Pune
+              </li>
+              <li>
+                Dr. Kailas Tehare, Assistant Professor, Applied Science, ADYPSOE
+                Pune
+              </li>
+              <li>
+                Dr. Niranjan Shegaonkar, Associate Professor, Mechanical
+                Engineering, ADYPSOE, Pune
+              </li>
+              <li>
+                Dr. Deepti, Assistant Professor, Computer Engineering, ADYPSOE Pune
+              </li>
+              <li>
+                Dr. Shreepad Sarange, Associate Professor, Mechanical Engineering,
+                ADYPSOE, Pune
+              </li>
+              <li>
+                Dr. Dilip More, Associate Professor, Mechanical Engineering,
+                ADYPSOE, Pune
+              </li>
+              <li>
+                Dr. Sanjay Khomde, Professor, Mechanical Engineering, ADYPSOE, Pune
+              </li>
+              <li>Dr Lalat Indu Giri, Assistant professor, NIT Goa</li>
+            </ul>
+          </div>
+          <div className="col-md-6">
+            <ul>
+
+              <li>
+                Dr S A Khan, Professor in Mechanical Engineering, Islamic university
+                Malaysia
+              </li>
+              <li>
+                Dr Israr Mohammad, Professor in Mechanical Engineering, Maryam
+                Abacha American university of Nigeria
+              </li>
+              <li>
+                Dr. Vidhya Patil, Professor in Civil Engineering, AISSMSCOE, Pune
+              </li>
+              <li>
+                Dr Sanjay Kulkarni, Professor in Civil Engineering, Symbiosis
+                college, Pune
+              </li>
+              <li>
+                Dr. Dhananjay Upasani, Professor in E & TC Engineering, Samarth
+                group Institutions, COE, Belhe, Pune
+              </li>
+              <li>
+                Dr. Mrunal Bachute, Professor, E & TC, Symbiosis University, Lavale
+                Pune
+              </li>
+              <li>Dr. Vishal Puranik, Assistant Professor, E & TC, MITAOE, Pune</li>
+              <li>
+                Dr. Sharmeela Chennaipan, Professor, Electrical Engineering, Chennai
+              </li>
+              <li>
+                Dr. Ankush Kadu, Assistant Professor, Electrical Engineering,
+                ADYPSOE, Pune
+              </li>
+              <li>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</li>
+              <li>
+                Dr. Kanchan Vaidhya, Assistant Professor, E & TC Engineering,
+                ADYPSOE, Pune
+              </li>
+              <li>
+                Dr. Nilesh Mali, Assistant Professor, Computer Engineering,
+                ADYPSOE, Pune
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+
+
+
         <hr />
         <h4>Topics Covered</h4>
         <ul>
@@ -267,11 +303,11 @@ const Editorial = () => {
         <ul>
           <li>
             ADYPJIET journal provides rapid publication of original articles,
-            reviews and short communications.{" "}
+            review aritcles, case studies and short communications.{" "}
           </li>
           <li>
             Submit the manuscript as a email attachment to the editorial office
-            at email id adypjiet@gmail.com A manuscript number will be sent to
+            at email id <span style={{fontWeight:'bold'}}>adypjiet@gmail.com</span>. A manuscript number will be sent to
             the corresponding author as a acknowledgement.{" "}
           </li>
           <li>

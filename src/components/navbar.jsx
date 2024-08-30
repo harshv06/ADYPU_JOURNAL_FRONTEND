@@ -4,21 +4,26 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const Img = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723531249/logo_ubrnvq.webp"
+  const Logo2 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/logo2_ugvx2c.jpg"
   return (
     <>
-      <div className="container justify-content-center p-4" id="nav-tab">
+      <div className="justify-content-center p-3" id="nav-tab">
         <div className="row">
-          <div className="col-4 col-sm-2">
+          <div className="col-md-1 col-sm-2">
             <img src={Img} alt="" className="logo" />
           </div>
-          <div className="col-8 col-sm-10 align-self-center justify-content-start">
+          <div className="col-md-10 col-sm-10 align-self-center justify-content-start">
             <h2 className="heading ">
               Ajeenkya DY Patil Journal of Innovation in Engineering &
               Technology
             </h2>
             <p className="subHeading">
-              Ajeenkya DY Patil Official Research Journal
+              [ Ajeenkya DY Patil Official Research Journal ]
             </p>
+          </div>
+          <div className="col-md-1">
+          <img src={Logo2} alt="" className="logo2" />
+
           </div>
         </div>
         {/* <button><Link to='/login'>Login</Link> </button> */}
@@ -121,6 +126,12 @@ function Navbar() {
                         Paper Template
                       </a>
                     </li>
+
+                    <li>
+                      <Link to="/apply-reviewer" className="nav-link">
+                        Apply as a Reviewer
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
@@ -135,10 +146,10 @@ function Navbar() {
                     Submission
                   </a>
                   <ul class="dropdown-menu submission">
-                    <Link to="/upload" className="dropdown-item">
+                    <Link to="/upload" className="dropdown-item nav-link">
                       Upload
                     </Link>
-                    <Link to="/" className="dropdown-item">
+                    <Link to="/" className="dropdown-item nav-link">
                       Tracking
                     </Link>
                   </ul>
