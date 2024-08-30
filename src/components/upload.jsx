@@ -26,7 +26,7 @@ function Upload() {
     formData.append('pdf', selectedFile);
 
     try {
-      const response = await fetch('http://192.168.0.105:3100/api/uploadPdf', {
+      const response = await fetch('http://82.112.237.241:3100/v1/uploadPaper', {
         method: 'POST',
         body: formData,
       });
