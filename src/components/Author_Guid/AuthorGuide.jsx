@@ -9,35 +9,40 @@ const AuthorGuide = () => {
       <div className="container">
         <h1>Author Guidelines</h1>
         <p>
-          Submission Preparation Checklist As part of the submission process,
-          authors are required to check off their submission's compliance with
-          all of the following items, and submissions may be returned to authors
-          that do not adhere to these guidelines :
+          As part of the submission process, authors must ensure that their submission complies with all of the following requirements. Submissions that do not meet these guidelines may be returned to the authors for revision
+          The submission must meet the following criteria:
+
         </p>
-        <ul>
+        <ol>
           <li>
-            The submission has not been previously published in another journal
-            nor currently is submitted in another journal.
+
+            The manuscript has not been published elsewhere and is not under consideration by any other journal.
+
           </li>
           <li>
-            The submission file is in OpenOffice, Microsoft Word, or RTF
-            document file format. Where available, URLs for the references have
-            been provided.
+            The file format must be OpenOffice, Microsoft Word, or RTF. Include URLs for references where available.
+
           </li>
           <li>
-            The text is single-spaced; uses a 12-point font; employs italics,
-            rather than underlining (except with URL addresses); and all
-            illustrations, figures, and tables are placed within the text at the
-            appropriate points, rather than at the end.
+            The text should be single-spaced, in a 12-point Times New Roman font for both the main text and headings. Avoid underlining except for URLs. All illustrations, figures, and tables should be placed within the text at their relevant locations rather than at the end.
+
           </li>
           <li>
-            The text adheres to the stylistic and bibliographic requirements
-            outlined in the Author Guidelines.
+            The text must conform to the stylistic and bibliographic requirements specified in the Author Guidelines.
+
           </li>
-        </ul>
+          <li>The manuscript must follow the Journal <a
+            href="././paper-template.pdf"
+            // className="nav-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Paper Template
+          </a></li>
+        </ol>
         <hr />
         <div className="container">
-          <h1>Review Policy </h1>
+          <h1>Peer Review  </h1>
           <p>
             The journal aims to speed up the decision process without compromising
             on quality.
@@ -48,7 +53,7 @@ const AuthorGuide = () => {
             Before starting the review process, the journal editor uses PLAGIARISM
             software.
             The review time in IJIE for each round is about 4 to 6 weeks; the
-            publication time is usually about 12 to 15 weeks, and at least two
+            publication time is usually about 1 to 6 months, and at least two
             reviewers will review each article.
           </p>
           <p>
@@ -82,29 +87,35 @@ const AuthorGuide = () => {
               </li>
             </ul>
           </p>
-        </div>
-        <hr />
-        <li>
-          <a
-            href="././Copyright-Form.pdf"
-            // className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
+          <hr />
+          <li>
+            <a
+              href="././Copyright-Form.pdf"
+              // className="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
             // style={'color=black,'}
-          >
-            Copyright Forms
-          </a>
-        </li>
-        <li>
-          <a
-            href="././paper-template.pdf"
-            // className="nav-link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Paper Template
-          </a>
-        </li>
+            >
+              Copyright Forms
+            </a>
+          </li>
+          <li>
+            <a
+              href="././paper-template.pdf"
+              // className="nav-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Paper Template
+            </a>
+          </li>
+          <br />
+          <p>The journal is available in online formats, with the online version accessible for free. We are committed to ensuring a swift publication process for our valued authors.
+            <br /><br />
+            Article Processing Charges:  <br />
+            Review Process Duration: 15 to 20 days <br />
+            Publication Timeframe: 1 to 6 months</p>
+        </div>
       </div>
       <Footer />
     </>
