@@ -112,7 +112,7 @@ const AuthorGuide = () => {
           <br />
           <p>The journal is available in online formats, with the online version accessible for free. We are committed to ensuring a swift publication process for our valued authors.
             <br /><br />
-            Article Processing Charges:  <br />
+            Article Processing Charges: ₹500  <br />
             Review Process Duration: 15 to 20 days <br />
             Publication Timeframe: 1 to 6 months</p>
         </div>

@@ -203,7 +203,7 @@ const Editorial = () => {
                 ADYPSOE, Pune
               </li>
               <li>
-                Dr. Sanjay Khomde, Professor, Mechanical Engineering, ADYPSOE, Pune
+                Dr. Sanjay khonde, Professor, Mechanical Engineering, ADYPSOE, Pune
               </li>
               <li>Dr Lalat Indu Giri, Assistant professor, NIT Goa</li>
             </ul>
