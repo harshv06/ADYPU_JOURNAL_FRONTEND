@@ -132,7 +132,7 @@ function Home() {
 
             <hr />
             <p>
-              <span style={{fontWeight:'bold'}}>Article Processing Charges:</span>
+              <span style={{fontWeight:'bold'}}>Article Processing Charges: ₹500</span>
               <br />
               <span style={{fontWeight:'bold'}}>Review Process Duration:</span> 4 to 6 weeks
               <br />
