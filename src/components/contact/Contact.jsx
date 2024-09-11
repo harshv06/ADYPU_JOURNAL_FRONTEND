@@ -14,7 +14,7 @@ const Contact = () => {
                         DY Patil Knowledge City Road Via Lohgaon, Airport Rd, <br /> Charholi Budruk, <br /> Pune, Maharashtra 412105, <br /> India</h4>
 
                     <h4>Email : editor@adypjiet.in</h4>
-                    <h4>Phone: 020-40555555 Ex. 4006</h4>
+                    <h4>Phone: 020-35037922 Ex. 6606</h4>
                 </div>
 
                 <div className="container col-md-6">
