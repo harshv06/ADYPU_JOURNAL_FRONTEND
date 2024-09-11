@@ -307,7 +307,7 @@ const Editorial = () => {
           </li>
           <li>
             Submit the manuscript as a email attachment to the editorial office
-            at email id <span style={{fontWeight:'bold'}}>adypjiet@gmail.com</span>. A manuscript number will be sent to
+            at email id <span style={{fontWeight:'bold'}}>adypjournal@gmail.com</span>. A manuscript number will be sent to
             the corresponding author as a acknowledgement.{" "}
           </li>
           <li>
