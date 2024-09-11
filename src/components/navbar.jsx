@@ -132,6 +132,18 @@ function Navbar() {
                         Apply as a Reviewer
                       </Link>
                     </li>
+
+                    <li>
+                      <Link to="/decisions" className="nav-link">
+                        Decisions
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link to="/indexing" className="nav-link">
+                        Abstacting & Indexing
+                      </Link>
+                    </li>
                   </ul>
                 </li>
 
