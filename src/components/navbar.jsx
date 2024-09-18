@@ -108,7 +108,7 @@ function Navbar() {
                     </li> */}
                     <li>
                       <a
-                        href="././Copyright-Form.pdf"
+                        href="/Copyright-Form.pdf"
                         className="nav-link"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -118,7 +118,7 @@ function Navbar() {
                     </li>
                     <li>
                       <a
-                        href="././paper-template.pdf"
+                        href="/paper-template.pdf"
                         className="nav-link"
                         target="_blank"
                         rel="noopener noreferrer"
