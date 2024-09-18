@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Nav from "./navbar";
 import "./Home.css";
 import Footer from "./Footer";
@@ -30,6 +30,10 @@ function Home() {
       alert('An error occurred while fetching the PDF');
     }
   };
+
+  useEffect(()=>{
+    document.title="ADYPJIET | Home"
+  },[])
 
   return (
     <>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import {StyleSheet} from 'react'
 import Navbar from "./navbar";
 import "./Editorial.css"
 import Footer from "./Footer";
 
 const Editorial = () => {
+
+  useEffect(()=>{
+    document.title="ADYPJIET | Editorial"
+  },[])
 
   const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/principal_waxtha.png"
   const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/saniya_kx1ewa.png"
