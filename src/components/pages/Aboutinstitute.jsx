@@ -10,7 +10,7 @@ function Aboutinstitute() {
       <Navbar />
 
       <div className="container">
-        <h1 style={{color:'brown'}}>About The Institute</h1>
+        <h1 style={{color:'brown',marginLeft:18}}>About The Institute</h1>
         {/* <h1>Ajeenkya DY Patil School Of Engineering, Pune</h1> */}
 
         <div className=" row">
