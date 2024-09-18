@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar";
 import Footer from "../Footer";
 import "./Aboutinstitute.css";
 
 
 function Aboutinstitute() {
+  useEffect(()=>{
+    document.title="ADYPJIET | About"
+  },[])
   return (
     <>
       <Navbar />

@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../navbar'
 import Footer from '../Footer'
 import './Contact.css'
 
 const Contact = () => {
+    useEffect(()=>{
+        document.title="Contact"
+    },[])
     return (
         <>
             <Navbar />

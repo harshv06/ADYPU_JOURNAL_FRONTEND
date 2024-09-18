@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../navbar";
 import Footer from "../Footer";
 
 const AuthorGuide = () => {
+  useEffect(()=>{
+    document.title="ADYPJIET | Author Guidelines"
+  },[])
   return (
     <>
       <Navbar />

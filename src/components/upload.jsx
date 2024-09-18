@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from './navbar';
 import Footer from './Footer';
 import './upload.css';
 
 function Upload() {
+  useEffect(()=>{
+    document.title="ADYPJIET | Publish"
+  },[])
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
 
