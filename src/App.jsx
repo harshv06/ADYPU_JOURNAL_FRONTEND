@@ -10,6 +10,9 @@ import Contact from "./components/contact/Contact";
 import Editorial from "./components/Editorial";
 import Review from "./components/Review/Review";
 import AuthorGuide from "./components/Author_Guid/AuthorGuide";
+import ApplyReviewer from "./components/ApplyReviewer/ApplyReviewer";
+import Decisions from "./components/Decisions";
+import Indexing from "./components/Indexing";
 
 function App() {
   return (
@@ -24,7 +27,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/review" element={<Review />} />
           <Route path="/author_guide" element={<AuthorGuide />} />
-
+          <Route path="/apply-reviewer" element={<ApplyReviewer/>}/>
+          <Route path="/decisions" element={<Decisions/>}/>
+          <Route path="/indexing" element={<Indexing/>}/>
         </Routes>
       </BrowserRouter>
     </>

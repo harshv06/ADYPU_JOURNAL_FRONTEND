@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Nav from './navbar';
 import Footer from './Footer';
 import './upload.css';
 
 function Upload() {
+  useEffect(()=>{
+    document.title="ADYPJIET | Publish"
+  },[])
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
 
@@ -26,7 +29,7 @@ function Upload() {
     formData.append('pdf', selectedFile);
 
     try {
-      const response = await fetch('http://192.168.0.105:3100/api/uploadPdf', {
+      const response = await fetch('http://82.112.237.241:3100/api/uploadPdf', {
         method: 'POST',
         body: formData,
       });
@@ -79,7 +82,7 @@ function Upload() {
 
           <div className='container row'>
             <div className='col-sm-4'>
-              <b>3. MAIN FILE (WORD FILE)</b> (including abstract and key words, introduction, material and methods, results/observation, discussion, conclusions, references and tables at last each on separate page)
+              <b>MAIN FILE (WORD FILE)</b> (including abstract and key words, introduction, material and methods, results/observation, discussion, conclusions, references and tables at last each on separate page)
             </div>
             <div className='col-sm-4'>
               <input type="file" onChange={handleFileChange} />
@@ -89,6 +92,9 @@ function Upload() {
 
           <input type="submit" value="Upload" className='upload-pdf' />
         </form>
+      </div>
+      <div>
+        
       </div>
       <Footer />
     </>
