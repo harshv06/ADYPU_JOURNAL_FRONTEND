@@ -1,39 +1,86 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "./navbar";
 import "./Home.css";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const Cover = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png"
-  const BGIMG = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/bg_lakuks.jpg"
-  const google = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540226/google_acukis.png"
-  const academia = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/academia_rm0ke5.png"
-  const rgate = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/rgate_uvnqo3.png"
-  const crossref = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/crossref_n8k4ty.png"
-  const worldcat = "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/worldcat_r1wzyw.png"
+  const Cover =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png";
+  const BGIMG =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/bg_lakuks.jpg";
+  const google =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540226/google_acukis.png";
+  const academia =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/academia_rm0ke5.png";
+  const rgate =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/rgate_uvnqo3.png";
+  const crossref =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/crossref_n8k4ty.png";
+  const worldcat =
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1723540225/worldcat_r1wzyw.png";
 
-  const fetchPdf = async () => {
+  const [pdfs, setPdfs] = useState([]);
+  const [error, setError] = useState("");
+
+  //To fetch latest three PDF
+  useEffect(() => {
+    const fetchLatestPDFs = async () => {
+      try {
+        const response = await fetch("http://82.112.237.241:3100/getLatest3PDF"); // Adjust the URL if needed
+        if (!response.ok) {
+          throw new Error("Failed to fetch PDFs");
+        }
+        const data = await response.json();
+        setPdfs(data);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
+
+    fetchLatestPDFs();
+  }, []);
+
+  //To fetch the most recent PDF from the backend
+  const viewLatestPDF = async () => {
     try {
-      // Replace with your backend endpoint to fetch the PDF
-      const response = await fetch('http://192.168.0.105:3100/fetchHomePagePdf');
+      const response = await fetch("http://82.112.237.241:3100/getLatestPDF");
 
-      if (response.ok) {
+      if (response.status === 200) {
         const pdfBlob = await response.blob();
         const pdfUrl = URL.createObjectURL(pdfBlob);
-        window.open(pdfUrl, '_blank'); // Open PDF in a new tab
+        console.log(pdfUrl);
+        window.open(pdfUrl, "_blank"); // Open the PDF in a new tab
       } else {
-        alert('Failed to fetch PDF');
+        alert("No PDF found");
       }
     } catch (error) {
-      console.error('Error fetching PDF:', error);
-      alert('An error occurred while fetching the PDF');
+      console.error("Error fetching the latest PDF:", error);
     }
   };
 
-  useEffect(()=>{
-    document.title="ADYPJIET | Home"
-  },[])
+
+  //useEffect for setting page title
+  useEffect(() => {
+    document.title = "ADYPJIET | Home";
+  }, []);
+
+  const fetchAnyPDF = (pdfPath) => {
+    fetch(`http://82.112.237.241:3100/getAnyPDF?filePath=${encodeURIComponent(pdfPath)}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.blob(); // Get the PDF as a blob
+        }
+        throw new Error('PDF not found');
+      })
+      .then((blob) => {
+        const url = window.URL.createObjectURL(blob);
+        window.open(url, '_blank'); // Open the PDF in a new tab
+      })
+      .catch((error) => {
+        console.error('Error fetching the PDF:', error);
+      });
+  };
 
   return (
     <>
@@ -50,14 +97,18 @@ function Home() {
             {/* <img src="https://drive.google.com/file/d/116ccnz8eCP_VDLKOEHSB-rKg_erynxOy/view?usp=drive_link" className='cover-image' alt="" /> */}
             {/* <p>Published : 09/03/2024</p> */}
             <hr />
-            <h4 className="mb-5 mt-4" style={{ color: 'green' }}> Research Articles</h4>
+            <h4 className="mb-5 mt-4" style={{ color: "green" }}>
+              {" "}
+              Research Articles
+            </h4>
 
             <div className="container-2">
-              <h5>Artificial Intelligence (AI) in Traffic Management Toward a Future without Traffic Police</h5>
+              <h5>
+                Artificial Intelligence (AI) in Traffic Management Toward a
+                Future without Traffic Police
+              </h5>
               <p>Poonam Musmade (Author)</p>
-              <a onClick={fetchPdf}>
-                View PDF
-              </a>
+              <button onClick={viewLatestPDF}>View PDF</button>
               <hr />
             </div>
           </div>
@@ -65,12 +116,23 @@ function Home() {
           <div className="container col-md-4">
             <br />
             <p className="about-journal">
-            <h3>About Journal</h3>
-              The Ajeenkya DY Patil Journal of Innovation in Engineering & Technology (ADYPJIET) is a scholarly, open-access, peer-reviewed journal that has been published quarterly from 2024.
-              It aims to foster advancements in applied science and engineering management. <br /><br />
-
-              ADYPJIET encompasses a diverse range of topics, including Industrial Engineering, Computer Science, Applied Mathematics, Operations Research, Production and Manufacturing Engineering, Statistics, Economics, Mechanical Engineering, Civil Engineering, Electrical Engineering, Architectural Engineering, Computer Engineering, Information Technology Engineering, Aerospace Engineering, Industrial Management, Genetic Engineering, Material Engineering, Chemical Engineering, and other related fields.
-              <br /><br />
+              <h3>About Journal</h3>
+              The Ajeenkya DY Patil Journal of Innovation in Engineering &
+              Technology (ADYPJIET) is a scholarly, open-access, peer-reviewed
+              journal that has been published quarterly from 2024. It aims to
+              foster advancements in applied science and engineering management.{" "}
+              <br />
+              <br />
+              ADYPJIET encompasses a diverse range of topics, including
+              Industrial Engineering, Computer Science, Applied Mathematics,
+              Operations Research, Production and Manufacturing Engineering,
+              Statistics, Economics, Mechanical Engineering, Civil Engineering,
+              Electrical Engineering, Architectural Engineering, Computer
+              Engineering, Information Technology Engineering, Aerospace
+              Engineering, Industrial Management, Genetic Engineering, Material
+              Engineering, Chemical Engineering, and other related fields.
+              <br />
+              <br />
               ADYPJIET publishes papers in the following categories:
               <ul>
                 <li> Research Articles</li>
@@ -78,11 +140,7 @@ function Home() {
                 <li> Case Reports</li>
                 <li>Short Communications</li>
               </ul>
-
-
-
             </p>
-
           </div>
 
           <div className=" quick-links col-md-3">
@@ -115,34 +173,51 @@ function Home() {
             </ul>
             <hr />
             <h4 className="side-heading">Latest Publication</h4>
-            <ol>
-              <li>Publications 1</li>
-              <li>Publications 2</li>
-              <li>Publications 3</li>
-            </ol>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+            <ul>
+              {pdfs.map((pdf, index) => (
+                <li key={index}>
+                  <button onClick={() => fetchAnyPDF(pdf.path)}>
+                    Publication {index + 1}
+                  </button>
+                </li>
+              ))}
+            </ul>
             <hr />
 
-            <h4 className="side-heading"> Journal  Information</h4>
+            <h4 className="side-heading"> Journal Information</h4>
             <div className="info">
-              <span>TITLE: </span>Ajeenkya DY Patil Journal of Innovation in Engineering & Technology <br />
+              <span>TITLE: </span>Ajeenkya DY Patil Journal of Innovation in
+              Engineering & Technology <br />
               <span>ABBREVIATION :</span> ADYPJIET <br />
               <span>E-ISSN :</span> <br />
               <span>FREQUENCY :</span> <br />
               <span>CROSS REF/DOI : </span> <br />
-              <span>EDITOR-IN-CHIEF : </span>Dr. F. B. Sayyad 
-              <p style={{marginLeft:'135px'}}>Dr. Saniya Ansari</p>
-              <span>EMAIL : </span>editor_adypjiet@dypic.in<br />
+              <span>EDITOR-IN-CHIEF : </span>Dr. F. B. Sayyad
+              <p style={{ marginLeft: "135px" }}>Dr. Saniya Ansari</p>
+              <span>EMAIL : </span>editor_adypjiet@dypic.in
+              <br />
             </div>
 
             <hr />
             <p>
-              <span style={{fontWeight:'bold'}}>Article Processing Charges: ₹500</span>
+              <span style={{ fontWeight: "bold" }}>
+                Article Processing Charges: ₹500
+              </span>
               <br />
-              <span style={{fontWeight:'bold'}}>Review Process Duration:</span> 4 to 6 weeks
+              <span style={{ fontWeight: "bold" }}>
+                Review Process Duration:
+              </span>{" "}
+              4 to 6 weeks
               <br />
-              <span style={{fontWeight:'bold'}}>Publication Timeframe:</span> 1 to 6 months
+              <span style={{ fontWeight: "bold" }}>
+                Publication Timeframe:
+              </span>{" "}
+              1 to 6 months
             </p>
-            <h4 className="submission-box" style={{ textAlign: 'center' }}>Manuscript submission is open for Volume 1 Issue 1 (Sep 2024).</h4>
+            <h4 className="submission-box" style={{ textAlign: "center" }}>
+              Manuscript submission is open for Volume 1 Issue 1 (Sep 2024).
+            </h4>
             {/* <h4>Indexing</h4> */}
             {/* <ul className="indexing_icons">
               <li>
