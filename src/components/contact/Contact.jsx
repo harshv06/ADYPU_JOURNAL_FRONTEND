@@ -16,7 +16,7 @@ const Contact = () => {
                     <h4>Ajeenkya DY Patil University
                         DY Patil Knowledge City Road Via Lohgaon, Airport Rd, <br /> Charholi Budruk, <br /> Pune, Maharashtra 412105, <br /> India</h4>
 
-                    <h4>Email : editor@adypjiet.in</h4>
+                    <h4>Email : editor_adypjiet@dypic.in</h4>
                     <h4>Phone: 020-35037922 Ex. 6606</h4>
                 </div>
 

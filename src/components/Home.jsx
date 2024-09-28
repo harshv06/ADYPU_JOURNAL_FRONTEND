@@ -53,8 +53,8 @@ function Home() {
             <h4 className="mb-5 mt-4" style={{ color: 'green' }}> Research Articles</h4>
 
             <div className="container-2">
-              <h5>The Biological Camera from Kidney of Human Beings</h5>
-              <p>Jitendra Sunte (Author)</p>
+              <h5>Artificial Intelligence (AI) in Traffic Management Toward a Future without Traffic Police</h5>
+              <p>Poonam Musmade (Author)</p>
               <a onClick={fetchPdf}>
                 View PDF
               </a>
@@ -131,7 +131,7 @@ function Home() {
               <span>CROSS REF/DOI : </span> <br />
               <span>EDITOR-IN-CHIEF : </span>Dr. F. B. Sayyad 
               <p style={{marginLeft:'135px'}}>Dr. Saniya Ansari</p>
-              <span>EMAIL : </span>adypjournal@gmail.com <br />
+              <span>EMAIL : </span>editor_adypjiet@dypic.in<br />
             </div>
 
             <hr />
