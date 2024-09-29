@@ -122,7 +122,7 @@ function Upload() {
 
           <div className="container row">
             <div className="col-sm-4">
-              <b>MAIN FILE (WORD FILE)</b> (including abstract and key words,
+              <b>MAIN FILE (PDF FILE)</b> (including abstract and key words,
               introduction, material and methods, results/observation,
               discussion, conclusions, references and tables at last each on
               separate page)
