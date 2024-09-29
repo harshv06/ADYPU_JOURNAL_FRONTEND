@@ -57,7 +57,7 @@ const Editorial = () => {
             <img src={img3} alt=""
               className="editor-image"
             />
-            <h5>Dr. Shobha Rupanar, <br /> Assistant Professor, Engineering Chemistery, shobha.rupanar@dypic.in
+            <h5>Dr. Shobha Rupanar, <br /> Assistant Professor, Engineering Chemistry, shobha.rupanar@dypic.in
             </h5>
           </div>
         </div>

@@ -173,8 +173,9 @@ function Home() {
               </li>
             </ul>
             <hr />
-            <h4 className="side-heading">Latest Publication</h4>
-            {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+            
+            {/* <h4 className="side-heading">Latest Publication</h4>
+            {error && <p style={{ color: "red" }}>{error}</p>}
             <ul>
               {pdfs.map((pdf, index) => (
                 <li key={index}>
@@ -184,7 +185,7 @@ function Home() {
                 </li>
               ))}
             </ul>
-            <hr />
+            <hr /> */}
 
             <h4 className="side-heading"> Journal Information</h4>
             <div className="info">
