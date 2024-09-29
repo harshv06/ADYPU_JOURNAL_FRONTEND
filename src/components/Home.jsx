@@ -24,23 +24,7 @@ function Home() {
   const [pdfs, setPdfs] = useState([]);
   const [error, setError] = useState("");
 
-  //To fetch latest three PDF
-  useEffect(() => {
-    const fetchLatestPDFs = async () => {
-      try {
-        const response = await fetch(`${MAIN_URL}/getLatest3PDF`); // Adjust the URL if needed
-        if (!response.ok) {
-          throw new Error("Failed to fetch PDFs");
-        }
-        const data = await response.json();
-        setPdfs(data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
 
-    fetchLatestPDFs();
-  }, []);
 
   //To fetch the most recent PDF from the backend
   const viewLatestPDF = async () => {
@@ -109,7 +93,7 @@ function Home() {
                 Future without Traffic Police
               </h5>
               <p>Poonam Musmade (Author)</p>
-              <button style={{padding:5}} onClick={viewLatestPDF}>View PDF</button>
+              <button className="view-pdf" onClick={viewLatestPDF}>View PDF</button>
               <hr />
             </div>
           </div>
@@ -173,7 +157,7 @@ function Home() {
               </li>
             </ul>
             <hr />
-            
+
             {/* <h4 className="side-heading">Latest Publication</h4>
             {error && <p style={{ color: "red" }}>{error}</p>}
             <ul>

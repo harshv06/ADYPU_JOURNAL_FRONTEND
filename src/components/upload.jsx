@@ -57,28 +57,28 @@ function Upload() {
       <div className="container">
         <form onSubmit={handleUpload} encType="multipart/form-data">
           <div className="container row">
-            <div className="col-sm-4">Corresponding Author</div>
-            <div className="col-sm-2">
-              <input type="text" placeholder="First Name" />
+            <div className="col-sm-4">Corresponding Authors</div>
+            <div className="col-sm-3">
+              <input type="text" placeholder="Names of Authors" />
             </div>
-            <div className="col-sm-2">
+            {/* <div className="col-sm-2">
               <input type="text" placeholder="Middle Name" />
             </div>
             <div className="col-sm-2">
               <input type="text" placeholder="Last Name" />
-            </div>
+            </div> */}
           </div>
 
           <div className="container row">
             <div className="col-sm-4">Mobile Number</div>
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               <input type="text" placeholder="Mobile Number" />
             </div>
           </div>
 
           <div className="container row">
             <div className="col-sm-4">Email</div>
-            <div className="col-sm-4">
+            <div className="col-sm-3">
               <input type="email" placeholder="Email" />
             </div>
           </div>
@@ -94,9 +94,13 @@ function Upload() {
               <input type="file" onChange={handleFileChange} />
               <p>Please upload a file less than 5MB</p>
             </div>
+
+          </div>
+          <div className="col-sm-1">
+            <input type="submit" value="Upload" className="upload-pdf" />
+
           </div>
 
-          <input type="submit" value="Upload" className="upload-pdf" />
         </form>
       </div>
       <div></div>

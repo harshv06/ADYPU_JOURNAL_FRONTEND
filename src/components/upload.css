@@ -7,14 +7,17 @@
     outline: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.2s ease-in-out;
+    margin-bottom: 20px;
+    background-color: rgb(101, 222, 101);
 }
 
-.upload-pdf:hover{
-    background-color: rgb(70, 84, 235);
+/* .upload-pdf:hover{
+    background-color: rgb(6, 105, 47);
     color: white;
-}
+} */
 
 input{
     margin: 10px;
     padding: 4px;
+    width: 100%;
 }
