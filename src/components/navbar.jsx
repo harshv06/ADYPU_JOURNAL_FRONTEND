@@ -18,7 +18,7 @@ function Navbar() {
               Technology
             </h2>
             <p className="subHeading">
-              [ Ajeenkya DY Patil Official Research Journal ]
+              [ Ajeenkya DY Patil Official Research Journal: Quarterly Edition ]
             </p>
           </div>
           <div className="col-md-1">
@@ -59,6 +59,11 @@ function Navbar() {
                 <li class="nav-item">
                   <Link to="/editorial" className="nav-link">
                     Editorial Board
+                  </Link>
+                </li>
+                <li class="nav-item">
+                  <Link to="/publications" className="nav-link">
+                    Publications
                   </Link>
                 </li>
                 {/* <li class="nav-item dropdown">
@@ -118,7 +123,7 @@ function Navbar() {
                     </li>
                     <li>
                       <a
-                        href="/paper-template.pdf"
+                        href="/Paper_template.pdf"
                         className="nav-link"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -161,9 +166,9 @@ function Navbar() {
                     <Link to="/upload" className="dropdown-item nav-link">
                       Upload
                     </Link>
-                    <Link to="/" className="dropdown-item nav-link">
+                    {/* <Link to="/" className="dropdown-item nav-link">
                       Tracking
-                    </Link>
+                    </Link> */}
                   </ul>
                 </li>
 
