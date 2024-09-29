@@ -5,7 +5,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const MAIN_URL="https://api.adypjiet.in"
+  // const MAIN_URL="https://api.adypjiet.in"
+  const MAIN_URL = "http://172.24.96.1:3100";
   const Cover =
     "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png";
   const BGIMG =
@@ -23,8 +24,9 @@ function Home() {
 
   const [pdfs, setPdfs] = useState([]);
   const [error, setError] = useState("");
-
-
+  const [author,setAuthor]=useState("")
+  const [path,setPath]=useState("")
+  const [fileName,setFileName]=useState("")
 
   //To fetch the most recent PDF from the backend
   const viewLatestPDF = async () => {
@@ -34,7 +36,7 @@ function Home() {
       if (response.status === 200) {
         const pdfBlob = await response.blob();
         const pdfUrl = URL.createObjectURL(pdfBlob);
-        console.log(pdfUrl);
+        console.log(response);
         window.open(pdfUrl, "_blank"); // Open the PDF in a new tab
       } else {
         alert("No PDF found");
@@ -44,26 +46,37 @@ function Home() {
     }
   };
 
-
   //useEffect for setting page title
   useEffect(() => {
     document.title = "ADYPJIET | Home";
+    const fetchLatestPDF = async () => {
+      try {
+        const response = await fetch(`${MAIN_URL}/getLatestPDFMeta`);
+        const json = await response.json();
+        setAuthor((prev)=>json.authors)
+        setPath((prev)=>json.filePath)
+        setFileName((prev)=>json.fileName)
+      } catch (error) {
+        console.error("Error fetching the latest PDF:", error);
+      }
+    };
+    fetchLatestPDF();
   }, []);
 
-  const fetchAnyPDF = (pdfPath) => {
-    fetch(`${MAIN_URL}/getAnyPDF?filePath=${encodeURIComponent(pdfPath)}`)
+  const fetchAnyPDF = () => {
+    fetch(`${MAIN_URL}/getAnyPDF?filePath=${encodeURIComponent(path)}`)
       .then((response) => {
         if (response.ok) {
           return response.blob(); // Get the PDF as a blob
         }
-        throw new Error('PDF not found');
+        throw new Error("PDF not found");
       })
       .then((blob) => {
         const url = window.URL.createObjectURL(blob);
-        window.open(url, '_blank'); // Open the PDF in a new tab
+        window.open(url, "_blank"); // Open the PDF in a new tab
       })
       .catch((error) => {
-        console.error('Error fetching the PDF:', error);
+        console.error("Error fetching the PDF:", error);
       });
   };
 
@@ -88,12 +101,12 @@ function Home() {
             </h4>
 
             <div className="container-2">
-              <h5>
-                Artificial Intelligence (AI) in Traffic Management Toward a
-                Future without Traffic Police
+              <h5>{fileName?fileName:null}
               </h5>
-              <p>Poonam Musmade (Author)</p>
-              <button className="view-pdf" onClick={viewLatestPDF}>View PDF</button>
+              <p>{author?author+"(Author)":null}</p>
+              <button className="view-pdf" onClick={fetchAnyPDF}>
+                View PDF
+              </button>
               <hr />
             </div>
           </div>
