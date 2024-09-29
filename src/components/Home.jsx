@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const MAIN_URL="https://api.adypjiet.in"
   const Cover =
     "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png";
   const BGIMG =
@@ -27,7 +28,7 @@ function Home() {
   useEffect(() => {
     const fetchLatestPDFs = async () => {
       try {
-        const response = await fetch("http://82.112.237.241:3100/getLatest3PDF"); // Adjust the URL if needed
+        const response = await fetch(`${MAIN_URL}/getLatest3PDF`); // Adjust the URL if needed
         if (!response.ok) {
           throw new Error("Failed to fetch PDFs");
         }
@@ -44,7 +45,7 @@ function Home() {
   //To fetch the most recent PDF from the backend
   const viewLatestPDF = async () => {
     try {
-      const response = await fetch("http://82.112.237.241:3100/getLatestPDF");
+      const response = await fetch(`${MAIN_URL}/getLatestPDF`);
 
       if (response.status === 200) {
         const pdfBlob = await response.blob();
@@ -66,7 +67,7 @@ function Home() {
   }, []);
 
   const fetchAnyPDF = (pdfPath) => {
-    fetch(`http://82.112.237.241:3100/getAnyPDF?filePath=${encodeURIComponent(pdfPath)}`)
+    fetch(`${MAIN_URL}/getAnyPDF?filePath=${encodeURIComponent(pdfPath)}`)
       .then((response) => {
         if (response.ok) {
           return response.blob(); // Get the PDF as a blob
@@ -99,7 +100,7 @@ function Home() {
             <hr />
             <h4 className="mb-5 mt-4" style={{ color: "green" }}>
               {" "}
-              Research Articlessssss
+              Research Articles
             </h4>
 
             <div className="container-2">
@@ -108,7 +109,7 @@ function Home() {
                 Future without Traffic Police
               </h5>
               <p>Poonam Musmade (Author)</p>
-              <button onClick={viewLatestPDF}>View PDF</button>
+              <button style={{padding:5}} onClick={viewLatestPDF}>View PDF</button>
               <hr />
             </div>
           </div>
@@ -173,11 +174,11 @@ function Home() {
             </ul>
             <hr />
             <h4 className="side-heading">Latest Publication</h4>
-            {error && <p style={{ color: "red" }}>{error}</p>}
+            {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
             <ul>
               {pdfs.map((pdf, index) => (
                 <li key={index}>
-                  <button onClick={() => fetchAnyPDF(pdf.path)}>
+                  <button style={{margin:5,padding:3}} onClick={() => fetchAnyPDF(pdf.path)}>
                     Publication {index + 1}
                   </button>
                 </li>
