@@ -6,8 +6,8 @@ import Footer from "../Footer";
 function Publications(props) {
   const [pdfs, setPdfs] = useState([]);
   const [error, setError] = useState("");
-//   const MAIN_URL = "http://172.24.96.1:3100";
-    const MAIN_URL="https://api.adypjiet.in"
+  const MAIN_URL = "http://172.24.96.1:3100";
+    // const MAIN_URL="https://api.adypjiet.in"
 
   // To fetch latest three PDF
   useEffect(() => {
