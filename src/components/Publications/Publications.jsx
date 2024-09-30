@@ -46,34 +46,29 @@ function Publications(props) {
       });
   };
 
-  return (
-    <>
-      <Navbar />
-      <div className="container">
-        <h1>Latest Publications</h1>
-        <div>
-          <h3>Vol.1</h3>
 
-          <h4 className="side-heading">Latest Publication</h4>
-          
-          {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
-          <ul>
-            {pdfs.map((pdf, index) => (
-              <div key={index}>
-                <h5>Paper Name: {pdf.name}</h5>
-                <p>Author Name: {pdf.author}</p>
-                <li key={index} style={{ listStyle: "none" }}>
-                  <button
-                    style={{ margin: 5, padding: 3 }}
-                    onClick={() => fetchAnyPDF(pdf.path)}
-                  >
-                    Download
-                  </button>
-                </li>
-              </div>
-            ))}
-          </ul>
-          <hr />
+  return (
+        <>
+            <Navbar />
+            <div className='container'>
+                <h1>Latest Publications</h1>
+                <div>
+                    <h3 style={{color:'purple'}}>Vol.1 Issue, September 2024</h3>
+
+                    <h4 className="side-heading">Latest Publication</h4>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                    <ul>
+                        {pdfs.map((pdf, index) => (
+                            <li key={index}>
+                                <button style={{ margin: 5, padding: 3 }} onClick={() => fetchAnyPDF(pdf.path)}>
+                                    Publication {index + 1}
+                                </button>
+                                <hr />
+                            </li>
+                            
+                        ))}
+                    </ul>
+                    <hr />
         </div>
       </div>
       <Footer />
