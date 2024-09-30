@@ -200,10 +200,10 @@ function Home() {
 
             <hr />
             <p>
-              <span style={{ fontWeight: "bold" }}>
+              {/* <span style={{ fontWeight: "bold" }}>
                 Article Processing Charges: ₹500
-              </span>
-              <br />
+              </span> */}
+              {/* <br /> */}
               <span style={{ fontWeight: "bold" }}>
                 Review Process Duration:
               </span>{" "}

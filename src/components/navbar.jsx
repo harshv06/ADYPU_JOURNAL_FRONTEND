@@ -191,7 +191,7 @@ function Navbar() {
         </nav>
       </div>
       <marquee behavior="" direction="" loop="">
-        Ajeenkya DY Patil School of Engineering, Official Research Journal Page, Ajeenkya DY Patil Journal in Engineering Tecchnologies (ADYPJIET)
+        Ajeenkya DY Patil School of Engineering, Official Research Journal Page, Ajeenkya DY Patil Journal in Engineering Tecchnology (ADYPJIET)
       </marquee>
     </>
   );

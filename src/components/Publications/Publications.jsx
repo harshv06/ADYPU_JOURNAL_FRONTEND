@@ -43,7 +43,9 @@ function Publications(props) {
                                 <button style={{ margin: 5, padding: 3 }} onClick={() => fetchAnyPDF(pdf.path)}>
                                     Publication {index + 1}
                                 </button>
+                                <hr />
                             </li>
+                            
                         ))}
                     </ul>
                     <hr />
