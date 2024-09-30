@@ -4,8 +4,8 @@ import Footer from "./Footer";
 import "./upload.css";
 
 function Upload() {
-  // const MAIN_URL = "https://api.adypjiet.in";
-  const MAIN_URL = "http://172.24.96.1:3100";
+  const MAIN_URL = "https://api.adypjiet.in";
+  // const MAIN_URL = "http://172.24.96.1:3100";
   const [Author, setAuthors] = useState("");
   const [Number, setNumber] = useState("");
   const [Email, setEmail] = useState("");
