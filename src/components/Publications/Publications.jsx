@@ -6,7 +6,7 @@ import Footer from "../Footer";
 function Publications(props) {
   const [pdfs, setPdfs] = useState([]);
   const [error, setError] = useState("");
-//   const MAIN_URL = "http://172.24.96.1:3100";
+  // const MAIN_URL = "http://172.24.96.1:3100";
     const MAIN_URL="https://api.adypjiet.in"
 
   // To fetch latest three PDF
@@ -56,18 +56,20 @@ function Publications(props) {
                     <h3 style={{color:'purple'}}>Vol.1 Issue, September 2024</h3>
 
                     <h4 className="side-heading">Latest Publication</h4>
-                    {error && <p style={{ color: "red" }}>{error}</p>}
-                    <ul>
+                    {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+                    <ol>
                         {pdfs.map((pdf, index) => (
                             <li key={index}>
+                                <h4>Paper Name: {pdf.name}</h4>
+                                <p>Author Name: {pdf.author}</p>
                                 <button style={{ margin: 5, padding: 3 }} onClick={() => fetchAnyPDF(pdf.path)}>
-                                    Publication {index + 1}
+                                    View PDF
                                 </button>
                                 <hr />
                             </li>
                             
                         ))}
-                    </ul>
+                    </ol>
                     <hr />
         </div>
       </div>
