@@ -33,7 +33,7 @@ function Publications(props) {
             <div className='container'>
                 <h1>Latest Publications</h1>
                 <div>
-                    <h3>Vol.1</h3>
+                    <h3 style={{color:'purple'}}>Vol.1 Issue, September 2024</h3>
 
                     <h4 className="side-heading">Latest Publication</h4>
                     {error && <p style={{ color: "red" }}>{error}</p>}
