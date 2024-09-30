@@ -190,7 +190,7 @@ function Home() {
               Engineering & Technology <br />
               <span>ABBREVIATION :</span> ADYPJIET <br />
               <span>E-ISSN :</span> <br />
-              <span>FREQUENCY :</span> <br />
+              <span>FREQUENCY :</span> Quarterly<br />
               <span>CROSS REF/DOI : </span> <br />
               <span>EDITOR-IN-CHIEF : </span>Dr. F. B. Sayyad
               <p style={{ marginLeft: "135px" }}>Dr. Saniya Ansari</p>
@@ -200,10 +200,10 @@ function Home() {
 
             <hr />
             <p>
-              <span style={{ fontWeight: "bold" }}>
+              {/* <span style={{ fontWeight: "bold" }}>
                 Article Processing Charges: ₹500
-              </span>
-              <br />
+              </span> */}
+              {/* <br /> */}
               <span style={{ fontWeight: "bold" }}>
                 Review Process Duration:
               </span>{" "}
