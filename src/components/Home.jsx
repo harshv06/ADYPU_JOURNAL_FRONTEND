@@ -24,9 +24,9 @@ function Home() {
 
   const [pdfs, setPdfs] = useState([]);
   const [error, setError] = useState("");
-  const [author,setAuthor]=useState("")
-  const [path,setPath]=useState("")
-  const [fileName,setFileName]=useState("")
+  const [author, setAuthor] = useState("");
+  const [path, setPath] = useState("");
+  const [fileName, setFileName] = useState("");
 
   //To fetch the most recent PDF from the backend
   const viewLatestPDF = async () => {
@@ -53,9 +53,9 @@ function Home() {
       try {
         const response = await fetch(`${MAIN_URL}/getLatestPDFMeta`);
         const json = await response.json();
-        setAuthor((prev)=>json.authors)
-        setPath((prev)=>json.filePath)
-        setFileName((prev)=>json.fileName)
+        setAuthor((prev) => json.authors);
+        setPath((prev) => json.filePath);
+        setFileName((prev) => json.fileName);
       } catch (error) {
         console.error("Error fetching the latest PDF:", error);
       }
@@ -101,9 +101,8 @@ function Home() {
             </h4>
 
             <div className="container-2">
-              <h5>{fileName?fileName:null}
-              </h5>
-              <p>{author?author+"(Author)":null}</p>
+              <h5>{fileName ? fileName : null}</h5>
+              <p>{author ? author + "(Author)" : null}</p>
               <button className="view-pdf" onClick={fetchAnyPDF}>
                 View PDF
               </button>
@@ -190,11 +189,21 @@ function Home() {
               Engineering & Technology <br />
               <span>ABBREVIATION :</span> ADYPJIET <br />
               <span>E-ISSN :</span> <br />
-              <span>FREQUENCY :</span> Quarterly<br />
+              <span>FREQUENCY :</span> Quarterly
+              <br />
               <span>CROSS REF/DOI : </span> <br />
-              <span>EDITOR-IN-CHIEF : </span>Dr. F. B. Sayyad
-              <p style={{ marginLeft: "135px" }}>Dr. Saniya Ansari</p>
-              <span>EMAIL : </span>editor_adypjiet@dypic.in
+              <span>EDITOR-IN-CHIEF : </span><br/>
+              Dr. F. B. Sayyad<br/>
+              <a href="mailto:farooksayyad@dypic.in">
+              farooksayyad@dypic.in<br/><br/>
+                </a>
+              Dr. Saniya Ansari<br/>
+              <a href="mailto:saniya.ansari@dypic.in">
+              saniya.ansari@dypic.in<br/>
+                </a>
+              <span>EMAIL : </span><a href="mailto:editor_adypjiet@dypic.in">
+              editor_adypjiet@dypic.in
+                </a>
               <br />
             </div>
 

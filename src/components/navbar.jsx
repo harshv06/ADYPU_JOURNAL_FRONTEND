@@ -175,6 +175,13 @@ function Navbar() {
                 {/* <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="#">Submission</a>
                                 </li> */}
+                                
+                <li class="nav-item">
+                  {/* <a class="nav-link active" aria-current="page" href="">Home</a> */}
+                  <Link to="/PublishingHouse" className="nav-link">
+                    Publishing House
+                  </Link>
+                </li>
 
                 <li class="nav-item">
                   {/* <a class="nav-link active" aria-current="page" href="">Home</a> */}
@@ -190,9 +197,9 @@ function Navbar() {
           </div>
         </nav>
       </div>
-      {/* <marquee behavior="" direction="" loop="">
-        Ajeenkya DY Patil School of Engineering, Official Research Journal Page, Ajeenkya DY Patil Journal in Engineering Tecchnology (ADYPJIET)
-      </marquee> */}
+      <marquee behavior="" direction="" loop="">
+        Open-access, peer-reviewed journal | Ajeenkya DY Patil Journal  of Innovation in Engineering & Technology (ADYPJIET)
+      </marquee>
     </>
   );
 }

@@ -14,6 +14,7 @@ import ApplyReviewer from "./components/ApplyReviewer/ApplyReviewer";
 import Decisions from "./components/Decisions";
 import Indexing from "./components/Indexing";
 import Publications from "./components/Publications/Publications";
+import PublishingHouse from "./components/PublishinHouse/PublishingHouse";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/decisions" element={<Decisions/>}/>
           <Route path="/indexing" element={<Indexing/>}/>
           <Route path="/publications" element={<Publications/>}/>
+          <Route path="/PublishingHouse" element={<PublishingHouse/>}/>
         </Routes>
       </BrowserRouter>
     </>
