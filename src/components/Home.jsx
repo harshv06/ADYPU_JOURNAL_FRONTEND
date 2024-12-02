@@ -5,8 +5,8 @@ import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const MAIN_URL="https://api.adypjiet.in"
-  // const MAIN_URL = "http://172.24.96.1:3100";
+  // const MAIN_URL="https://api.adypjiet.in"
+  const MAIN_URL = "http://172.24.96.1:3100";
   const Cover =
     "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png";
   const BGIMG =
