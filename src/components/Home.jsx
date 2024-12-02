@@ -201,7 +201,7 @@ function Home() {
               <a href="mailto:saniya.ansari@dypic.in">
               saniya.ansari@dypic.in<br/>
                 </a>
-              <span>EMAIL : </span><a href="mailto:editor_adypjiet@dypic.in">
+              <span>Journal Email : </span><a href="mailto:editor_adypjiet@dypic.in">
               editor_adypjiet@dypic.in
                 </a>
               <br />
