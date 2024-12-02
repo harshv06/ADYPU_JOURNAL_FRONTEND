@@ -1,1 +1,31 @@
+name: Deploy to Hostinger VPS
+
+on:
+  push:
+    branches:
+      - main  # Adjust if you're using a different branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.HOST }}
+
+      - name: Deploy to VPS and Restart App
+        run: |
+          ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
+          cd /root/ADYPU_FRONT_NEW
+          git pull origin main
+          npm install
+          pm2 restart my-app || pm2 start index.js --name "my-app"
+          pm2 save
+          EOF
 
