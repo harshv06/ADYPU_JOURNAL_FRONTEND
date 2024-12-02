@@ -1,31 +1,28 @@
-name: Deploy to Hostinger VPS
+name: Deploy React App to VPS
 
 on:
   push:
     branches:
-      - main  # Adjust if you're using a different branch
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
+      - name: Install SSH Key
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: ${{ secrets.HOST }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to VPS and Restart App
+      - name: Deploy Application
         run: |
-          ssh -p ${{ secrets.SSH_PORT }} ${{ secrets.USERNAME }}@${{ secrets.HOST }} << 'EOF'
-          cd /root/ADYPU_FRONT_NEW
+          ssh -o StrictHostKeyChecking=no root@82.112.237.241 << 'EOF'
+          cd /root/ADYPU_JOURNAL_FRONTEND
           git pull origin main
           npm install
-          pm2 restart my-app || pm2 start index.js --name "my-app"
-          pm2 save
+          npm run build
+          pm2 restart all
           EOF
-
