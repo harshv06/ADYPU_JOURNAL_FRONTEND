@@ -6,19 +6,19 @@ import Footer from "./Footer";
 
 const Editorial = () => {
 
-  useEffect(()=>{
-    document.title="ADYPJIET | Editorial"
-  },[])
+  useEffect(() => {
+    document.title = "ADYPJIET | Editorial"
+  }, [])
 
-  const img1="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/principal_waxtha.png"
-  const img2="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/saniya_kx1ewa.png"
-  const img3="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/shobha-rupanar_xykf2a.png"
-  const img4="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/pankaj-agarkar_aotp0f.png"
-  const img5="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/rohit-garad_tkvkvm.png"
-  const img6="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009845/rahul-bachute_syvvmf.png"
-  const img7="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/bhagrayshree_dpnidg.png"
-  const img8="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009701/karodpati_r40i0j.jpg"
-  const img9="https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/khairnar_wnbesi.png"
+  const img1 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/principal_waxtha.png"
+  const img2 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/saniya_kx1ewa.png"
+  const img3 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009703/shobha-rupanar_xykf2a.png"
+  const img4 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/pankaj-agarkar_aotp0f.png"
+  const img5 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/rohit-garad_tkvkvm.png"
+  const img6 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009845/rahul-bachute_syvvmf.png"
+  const img7 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/bhagrayshree_dpnidg.png"
+  const img8 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009701/karodpati_r40i0j.jpg"
+  const img9 = "https://res.cloudinary.com/drv3etzyg/image/upload/v1725009702/khairnar_wnbesi.png"
   return (
     <>
       <Navbar />
@@ -38,14 +38,15 @@ const Editorial = () => {
               alt=""
             />
             <h5>Dr. F B Sayyad, Professor, <br /> Mechanical Engineering, Ph.D. (Mechanical
-              Engineering)</h5>
+              Engineering) <br /> farooksayyad@dypic.in</h5>
+
           </div>
           <div className="col-md-6">
             <img src={img2} alt=""
               className="editor-image"
             />
             <h5>Dr. Saniya Ansari, <br /> Associate Professor, E & TC Engineering, Ph.D.
-              (ECE)</h5>
+              (ECE) <br />saniya.ansari@dypic.in</h5>
           </div>
           <hr />
         </div>
@@ -84,36 +85,43 @@ const Editorial = () => {
             />
             <h5>Dr. Sanjay Koli, Professor, E & TC Engineering, ADYPSOE Pune</h5>
           </div> */}
-          <div className="col-md-2">
+          <div className="col-md-4 p-4">
             <img src={img4} alt=""
               className="editor-image"
             />
             <h5>Dr. Pankaj Agarkar, Associate Professor, Computer Engineering, hod_comp@dypic.in
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-4 p-4">
             <img
               className="editor-image"
               src={img5}
               alt=""
             />
             <h5>Prof. Rohit Garad, Assistant Professor, Mechanical Engineering, hod_mech@dypic.in
+
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
           </div>
-          <div className="col-md-2">
+          <div className="col-md-4 p-4">
             <img
               src={img6} alt=""
               className="editor-image"
             />
             <h5>Dr. Rahul Bachute, Associate Professor, Automobile Engineering, hodautosoet@dypic.in
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
+
           </div>
-          <div className="col-md-2">
+          <div className="col-md-4 p-4">
             <img src={img7} alt=""
               className="editor-image"
             />
-            <h5>Prof. Bhagyashree Dhakulkar, Assistant Professor, AIDS, hod_aids@dypic.in
+            <h5>Dr. Bhagyashree Dhakulkar, Assistant Professor, AIDS, hod_aids@dypic.in
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
+
           </div>
           {/* <div className="col-md-3">
             <img
@@ -124,19 +132,23 @@ const Editorial = () => {
             <h5>Dr. Sanjay Khonde, Professor, Mechanical Engineering, ADYPSOE, Pune
             </h5>
           </div> */}
-          <div className="col-md-2">
+          <div className="col-md-4 p-4 ">
             <img src={img8} alt=""
               className="editor-image"
             />
             <h5>Prof. Lt. Col. Sanjay Karodpati, Professor, Civil Engineering, hod_civil@dypic.in
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
+
           </div>
-          <div className="col-md-2">
+          <div className="col-md-4 p-4 ">
             <img src={img9} alt=""
               className="editor-image"
             />
             <h5>Dr. S M Khairnar, Professor, Engineering Mathematics,hodfe@dypic.in
             </h5>
+            <p style={{ fontSize: 14 }}>Ajeenkya DY Patil School of Engineering, Dr D Y Patil Knowledge City, Charholi (Bk), Via Lohegaon, Pune- 412 105.</p>
+
           </div>
         </div>
         {/* <ol>
@@ -311,7 +323,7 @@ const Editorial = () => {
           </li>
           <li>
             Submit the manuscript as a email attachment to the editorial office
-            at email id <a href="mailto:editor_adypjiet@dypic.in" style={{fontWeight:'bold'}}>editor_adypjiet@dypic.in</a>. A manuscript number will be sent to
+            at email id <a href="mailto:editor_adypjiet@dypic.in" style={{ fontWeight: 'bold' }}>editor_adypjiet@dypic.in</a>. A manuscript number will be sent to
             the corresponding author as a acknowledgement.{" "}
           </li>
           <li>

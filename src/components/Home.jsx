@@ -114,10 +114,7 @@ function Home() {
             <br />
             <p className="about-journal">
               <h3>About Journal</h3>
-              The Ajeenkya DY Patil Journal of Innovation in Engineering &
-              Technology (ADYPJIET) is a scholarly, open-access, peer-reviewed
-              journal that has been published quarterly from 2024. It aims to
-              foster advancements in applied science and engineering management.{" "}
+              The Ajeenkya DY Patil Journal of Innovation in Engineering & Technology is a scholarly, open-access, and peer-reviewed journal, published quarterly in English, starting in 2024.{" "}
               <br />
               <br />
               ADYPJIET encompasses a diverse range of topics, including

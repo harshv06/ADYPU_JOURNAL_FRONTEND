@@ -18,7 +18,7 @@ function Navbar() {
               Technology
             </h2>
             <p className="subHeading">
-              [ Ajeenkya DY Patil Official Research Journal: Quarterly Edition ]
+              [ Quarterly Edition ]
             </p>
           </div>
           <div className="col-md-1">

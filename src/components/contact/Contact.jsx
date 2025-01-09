@@ -13,8 +13,7 @@ const Contact = () => {
             <div className='row'>
                 <div className='container col-md-4'>
                     <p>For queries please feel free to contact at</p>
-                    <h4>Ajeenkya DY Patil University
-                        DY Patil Knowledge City Road Via Lohgaon, Airport Rd, <br /> Charholi Budruk, <br /> Pune, Maharashtra 412105, <br /> India</h4>
+                    <h4>Ajeenkya DY Patil University DY Patil Road Via Lohgaon, Airport Rd, <br /> Charholi Budruk, <br /> Pune, 412105 Maharashtra, <br /> India</h4>
 
                     <h4>Email : editor_adypjiet@dypic.in</h4>
                     <h4>Phone: 020-35037922 Ex. 6606</h4>
