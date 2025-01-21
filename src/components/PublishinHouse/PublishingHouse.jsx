@@ -10,12 +10,13 @@ function PublishingHouse() {
           <div className="col-md-8 text-justify align-self-center">
             <h1 style={{fontWeight:'400'}}>All Correspondence to,</h1>
             <h1 className="font-weight-bold ">Publisher</h1>
-            <h1 style={{fontSize:'30px'}}>Dr. Farook Sayyad</h1>
-            <h4 className="text-justify mb-4">
+            {/* <h1 style={{fontSize:'30px'}}>Dr. Farook Sayyad</h1> */}
+            <h1 className="text-justify mb-4" style={{fontWeight:800, color:'purple'}}>
               {/* <span style={{color:'purple', fontWeight:'bold',fontSize:'22px'}}>Ajeenkya DY Patil School of Engineering</span><br /> */}
-              Ajeenkya DY Patil University, DY Patil Knowledge City Road, Via Lohegaon, Airport Rd,
-              Charholi Budruk, Pune, Maharashtra 412105, India
-            </h4>
+              Ajeenkya DY Patil School of Engineering, 
+            </h1>
+            <h4>DY Patil Knowledge City Road, Via Lohegaon, Airport Rd,
+              Charholi Budruk, Pune, Maharashtra 412105, India</h4>
 
             {/* Publisher name with style applied */}
             {/* <h4 style={{ color: 'purple', fontWeight: 'bold',fontSize:'20px' }}>

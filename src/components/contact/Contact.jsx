@@ -12,6 +12,7 @@ const Contact = () => {
             <Navbar />
             <div className='row'>
                 <div className='container col-md-4'>
+                    <h3 style={{color:'purple', fontWeight:'bold'}}>Ajeenkya DY Patil School of Engineering</h3>
                     <p>For queries please feel free to contact at</p>
                     <h4>Ajeenkya DY Patil University DY Patil Road Via Lohgaon, Airport Rd, <br /> Charholi Budruk, <br /> Pune, 412105 Maharashtra, <br /> India</h4>
 
