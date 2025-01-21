@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 function Home() {
   // const MAIN_URL="https://api.adypjiet.in"
-  const MAIN_URL = "http://172.24.96.1:3100";
+  const MAIN_URL = "https://api.adypjiet.in";
   const Cover =
-    "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010011/adyp_cover_nh3hry.png";
+    "https://res.cloudinary.com/drv3etzyg/image/upload/v1736427106/WhatsApp_Image_2025-01-09_at_18.11.22_a224e5f5_no8yfs.jpg";
   const BGIMG =
     "https://res.cloudinary.com/drv3etzyg/image/upload/v1725010012/bg_lakuks.jpg";
   const google =
@@ -64,6 +64,7 @@ function Home() {
   }, []);
 
   const fetchAnyPDF = () => {
+    console.log("Done")
     fetch(`${MAIN_URL}/getAnyPDF?filePath=${encodeURIComponent(path)}`)
       .then((response) => {
         if (response.ok) {
